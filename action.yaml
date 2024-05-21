@@ -21,6 +21,7 @@ runs:
         echo "jq already installed"
         # sudo apt-get -y install wget curl lsof jq gnupg libapr1 openssl g++ gcc automake make cmake libtool libapr1-dev libssl-dev
         user_id=`id -u`
+        export RUNNER_ALLOW_RUNASROOT="1"
         echo $user_id
         echo $RUNNER_ALLOW_RUNASROOT
         if [ $user_id -eq 0 -a -z "$RUNNER_ALLOW_RUNASROOT" ]; then
