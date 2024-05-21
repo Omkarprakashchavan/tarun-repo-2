@@ -17,6 +17,8 @@ runs:
          echo "jq is not installed, installing..."
          sudo apt-get update
          sudo apt-get -y install wget curl lsof jq gnupg libapr1 openssl g++ gcc automake make cmake libtool libapr1-dev libssl-dev
+      else
+        echo "jq already installed"
       fi
 
       if ! command -v yq &> /dev/null; then
@@ -26,6 +28,9 @@ runs:
          LATEST=$(wget -qO- https://api.github.com/repos/mikefarah/yq/releases/latest 2>/dev/null | grep browser_download_url | grep $BINARY\"\$|awk '{print $NF}' )
          wget -q $LATEST -O /usr/bin/yq && sudo chmod +x /usr/bin/yq
          yq -V
+      else
+        yq -V
+        echo "yq already installed"
       fi
       # ARTIFACTORY_KEY=$(jq -r '.HPE_ARTIFACTORY_BBOB_API_KEY' <<< '${{ inputs.secrets }}')
       # ARTIFACTORY_USER=$(jq -r '.HPE_ARTIFACTORY_BBOB_USERNAME' <<< '${{ inputs.secrets }}')
