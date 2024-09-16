@@ -1,0 +1,19 @@
+name: Managed CI Workflow Deployer - Repo2
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'workflow-deployment.yaml'
+  schedule:
+    - cron: '0 11 * * 0-6'
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone the MCI repository
+        uses: actions/checkout@v3.3.0
+      - name: Set Job event name as environment variable
+        run: export RUN_EVENT=${{ github.event_name }}
+        
