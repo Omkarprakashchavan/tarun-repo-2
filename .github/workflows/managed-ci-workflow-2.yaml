@@ -31,6 +31,7 @@ jobs:
           pip3 install requests
           pip3 install gitpython
           ls -lrt
+          pwd
           # Import hashlib library (md5 method is part of it)
           python -c """
           import hashlib
@@ -40,7 +41,6 @@ jobs:
           import git
           import yaml
           from ruamel.yaml import YAML
-          sys.path.append(f'{os.path.dirname(__file__)}/..')
           import subprocess
           from os import listdir
           from os.path import isfile, join
