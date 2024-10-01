@@ -31,4 +31,23 @@ jobs:
           pip3 install requests
           pip3 install gitpython
           ls -lrt
-        
+          # Import hashlib library (md5 method is part of it)
+          import hashlib
+          import logging
+          import os
+          import sys
+          import git
+          import yaml
+          from ruamel.yaml import YAML
+          sys.path.append(f'{os.path.dirname(__file__)}/..')
+          import subprocess
+          from os import listdir
+          from os.path import isfile, join
+          import requests
+          import json
+          versioned_ci_repo = f'{os.path.dirname(__file__)}'
+          print(versioned_ci_repo)
+          repo_path = versioned_ci_repo
+          repo = git.Repo(repo_path)
+          main_branch = repo.heads.main
+          print(main_branch)
