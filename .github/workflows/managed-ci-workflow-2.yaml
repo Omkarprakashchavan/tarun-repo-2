@@ -109,7 +109,8 @@ jobs:
               file_commit_sha = get_file_content_from_commit(repo, latest_commit_sha, file_path)
               # print(f"Commit SHA of '{file_path}' in the latest commit: {file_commit_sha}")
           except ValueError:
-              print(f"File '{file_path}' does not exist in the latest commit {latest_commit_sha}")
+              print('valueError')
+              # print(f"File '{file_path}' does not exist in the latest commit {latest_commit_sha}")
           try:
               content_old = get_file_content_from_commit(repo, second_top_commit, file_path)
               content_new = get_file_content_from_commit(repo, latest_commit_sha, file_path)
