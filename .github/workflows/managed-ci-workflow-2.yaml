@@ -21,4 +21,11 @@ jobs:
           repository: Omkarprakashchavan/tarun-repo-1
       - name: Set Job event name as environment variable
         run: export RUN_EVENT=${{ github.event_name }}
+      - name: Install Python modules
+        run: |
+          pip3 install ruamel.yaml
+          pip3 install pyyaml
+          pip3 install requests
+          pip3 install gitpython
+          ls -lrt
         
