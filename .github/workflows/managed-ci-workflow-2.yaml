@@ -52,30 +52,6 @@ jobs:
           repo_path = versioned_ci_repo
           repo = git.Repo(repo_path)
           main_branch = repo.heads.main
-          print(main_branch)
-          latest_commit_sha = main_branch.commit.hexsha
-          second_top_commit = get_second_top_commit(repo_path)
-          # print(f"Latest commit SHA of 'main': {latest_commit_sha} {second_top_commit}")
-          print(latest_commit_sha, second_top_commit)
-          try:
-              file_commit_sha = get_file_content_from_commit(repo, latest_commit_sha, file_path)
-              # print(f"Commit SHA of '{file_path}' in the latest commit: {file_commit_sha}")
-          except ValueError:
-              print(f"File '{file_path}' does not exist in the latest commit {latest_commit_sha}")
-          try:
-              content_old = get_file_content_from_commit(repo, second_top_commit, file_path)
-              content_new = get_file_content_from_commit(repo, latest_commit_sha, file_path)
-          except ValueError as e:
-              print(e)
-          dict_old = load_yaml(content_old)
-          dict_new = load_yaml(content_new)
-          print(dict_old, dict_new)
-          # Extract repositories data from dict1 and dict2
-          repositories1 = dict_old['modules'][0]['repositories']
-          repositories2 = dict_new['modules'][0]['repositories']
-          changed_repositories = compare_repositories(repositories1, repositories2)
-          print(f'Changed repositories: {changed_repositories}')
-
           def load_yaml(file_content):
               # """Read workflow-deployment.yaml content into a dictionary."""
               return yaml.safe_load(file_content)
@@ -126,4 +102,28 @@ jobs:
               if not changes['repositories']:
                   return {}
               return changes
+              
+          print(main_branch)
+          latest_commit_sha = main_branch.commit.hexsha
+          second_top_commit = get_second_top_commit(repo_path)
+          # print(f"Latest commit SHA of 'main': {latest_commit_sha} {second_top_commit}")
+          print(latest_commit_sha, second_top_commit)
+          try:
+              file_commit_sha = get_file_content_from_commit(repo, latest_commit_sha, file_path)
+              # print(f"Commit SHA of '{file_path}' in the latest commit: {file_commit_sha}")
+          except ValueError:
+              print(f"File '{file_path}' does not exist in the latest commit {latest_commit_sha}")
+          try:
+              content_old = get_file_content_from_commit(repo, second_top_commit, file_path)
+              content_new = get_file_content_from_commit(repo, latest_commit_sha, file_path)
+          except ValueError as e:
+              print(e)
+          dict_old = load_yaml(content_old)
+          dict_new = load_yaml(content_new)
+          print(dict_old, dict_new)
+          # Extract repositories data from dict1 and dict2
+          repositories1 = dict_old['modules'][0]['repositories']
+          repositories2 = dict_new['modules'][0]['repositories']
+          changed_repositories = compare_repositories(repositories1, repositories2)
+          print(f'Changed repositories: {changed_repositories}')
           """
