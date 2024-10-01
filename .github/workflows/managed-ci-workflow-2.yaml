@@ -46,7 +46,8 @@ jobs:
           from os.path import isfile, join
           import requests
           import json
-          versioned_ci_repo = f'{os.path.dirname(__file__)}'
+          dir_name = os.getcwd()
+          versioned_ci_repo = f'{dir_name}/tarun-repo-1/'
           print(versioned_ci_repo)
           repo_path = versioned_ci_repo
           repo = git.Repo(repo_path)
