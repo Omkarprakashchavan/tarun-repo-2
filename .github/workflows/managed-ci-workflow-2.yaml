@@ -54,11 +54,9 @@ jobs:
           main_branch = repo.heads.main
           
           def load_yaml(file_content):
-              # """Read workflow-deployment.yaml content into a dictionary."""
               return yaml.safe_load(file_content)
           
           def get_file_content_from_commit(repo, commit_sha, file_path):
-              # """Get the content of a file from a specific commit SHA."""
               commit = repo.commit(commit_sha)
               try:
                   file_blob = commit.tree[file_path]
@@ -68,9 +66,7 @@ jobs:
                   raise ValueError(f"File '{file_path}' does not exist in commit {commit_sha}")
           
           def get_second_top_commit(repo_path):
-              # Open the repository
               repo = git.Repo(repo_path)
-              # Ensure we're working with the 'main' branch
               try:
                   branch = repo.heads.main
               except AttributeError:
