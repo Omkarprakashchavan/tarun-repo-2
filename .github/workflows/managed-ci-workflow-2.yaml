@@ -15,10 +15,13 @@ jobs:
     steps:
       - name: Clone the MCI repository
         uses: actions/checkout@v3.3.0
+        with:
+          path: tarun-repo-2
       - name: Clone the MCI repository
         uses: actions/checkout@v3.3.0
         with:
           repository: Omkarprakashchavan/tarun-repo-1
+          path: tarun-repo-1
       - name: Set Job event name as environment variable
         run: export RUN_EVENT=${{ github.event_name }}
       - name: Install Python modules
