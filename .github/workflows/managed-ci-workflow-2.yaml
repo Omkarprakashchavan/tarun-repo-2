@@ -63,21 +63,21 @@ jobs:
                   file_content = file_blob.data_stream.read().decode('utf-8')
                   return file_content
               except KeyError:
-                  # raise ValueError(f"File '{file_path}' does not exist in commit {commit_sha}")
                   print("ValueError")
+                  # raise ValueError(f"File '{file_path}' does not exist in commit {commit_sha}")
           
           def get_second_top_commit(repo_path):
               repo = git.Repo(repo_path)
               try:
                   branch = repo.heads.main
               except AttributeError:
-                  # raise ValueError("The repository does not have a branch named 'main'.")
                   print("ValueError")
+                  # raise ValueError("The repository does not have a branch named 'main'.")
               # Get the list of commits in the branch
               commits = list(repo.iter_commits(branch.name, max_count=2))
               if len(commits) < 2:
-                  # raise ValueError("There are less than two commits in the 'main' branch.")
                   print("ValueError")
+                  # raise ValueError("There are less than two commits in the 'main' branch.")
               # The second most recent commit will be the second item in the list
               second_top_commit = commits[1]
               return second_top_commit
