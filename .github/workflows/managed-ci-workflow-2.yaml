@@ -52,6 +52,7 @@ jobs:
           repo_path = versioned_ci_repo
           repo = git.Repo(repo_path)
           main_branch = repo.heads.main
+          
           def load_yaml(file_content):
               # """Read workflow-deployment.yaml content into a dictionary."""
               return yaml.safe_load(file_content)
