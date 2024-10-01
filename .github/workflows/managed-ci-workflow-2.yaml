@@ -55,7 +55,7 @@ jobs:
           print(main_branch)
           latest_commit_sha = main_branch.commit.hexsha
           second_top_commit = get_second_top_commit(repo_path)
-          # print(f"Latest commit SHA of 'main': {latest_commit_sha}")
+          print(f"Latest commit SHA of 'main': {latest_commit_sha} {second_top_commit}")
           try:
               file_commit_sha = get_file_content_from_commit(repo, latest_commit_sha, file_path)
               # print(f"Commit SHA of '{file_path}' in the latest commit: {file_commit_sha}")
@@ -68,6 +68,7 @@ jobs:
               print(e)
           dict_old = load_yaml(content_old)
           dict_new = load_yaml(content_new)
+          print(dict_old, dict_new)
           # Extract repositories data from dict1 and dict2
           repositories1 = dict_old['modules'][0]['repositories']
           repositories2 = dict_new['modules'][0]['repositories']
