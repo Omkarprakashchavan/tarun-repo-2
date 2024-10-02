@@ -48,6 +48,7 @@ jobs:
           import json
           dir_name = os.getcwd()
           versioned_ci_repo = f'{dir_name}/tarun-repo-1/'
+          print("Printing Version CI repo Name")
           print(versioned_ci_repo)
           repo_path = versioned_ci_repo
           repo = git.Repo(repo_path)
@@ -106,6 +107,7 @@ jobs:
           print(main_branch)
           latest_commit_sha = main_branch.commit.hexsha
           second_top_commit = get_second_top_commit(repo_path)
+          print("repo and commit details")
           print(repo_path, latest_commit_sha, second_top_commit)
           # print(f"Latest commit SHA of 'main': {latest_commit_sha} {second_top_commit}")
           print(f' Printing commit details: {latest_commit_sha}, {second_top_commit}')
