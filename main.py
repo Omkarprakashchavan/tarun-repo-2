@@ -35,7 +35,7 @@ topdir = os.path.dirname(os.path.abspath(sys.argv[0]))
 logdir = f'{topdir}/logdir'
 file_name_pattern='managed-ci'
 
-versioned_ci_repo = f'{os.path.dirname(__file__)}/../{managed_ci_workflow_repo}'
+versioned_ci_repo = f'{os.path.dirname(__file__)}/../tarun-repo-1'
 repo_path = versioned_ci_repo
 file_path = 'workflow-deployment.yaml'
 print(f'printing version ci repo name {versioned_ci_repo} {repo_path}')
