@@ -32,97 +32,98 @@ jobs:
           pip3 install gitpython
           ls -lrt
           pwd
-          # Import hashlib library (md5 method is part of it)
-          python -c """
-          import hashlib
-          import logging
-          import os
-          import sys
-          import git
-          import yaml
-          from ruamel.yaml import YAML
-          import subprocess
-          from os import listdir
-          from os.path import isfile, join
-          import requests
-          import json
-          dir_name = os.getcwd()
-          versioned_ci_repo = f'{dir_name}/tarun-repo-1/'
-          print('Printing Version CI repo Name')
-          print(versioned_ci_repo)
-          repo_path = versioned_ci_repo
-          repo = git.Repo(repo_path)
-          main_branch = repo.heads.main
-          def load_yaml(file_content):
-              return yaml.safe_load(file_content)
-          def get_file_content_from_commit(repo, commit_sha, file_path):
-              commit = repo.commit(commit_sha)
-              try:
-                  file_blob = commit.tree[file_path]
-                  file_content = file_blob.data_stream.read().decode('utf-8')
-                  return file_content
-              except KeyError:
-                  print("ValueError")
-                  # raise ValueError(f"File '{file_path}' does not exist in commit {commit_sha}")
-          def get_second_top_commit(repo_path):
-              repo = git.Repo(repo_path)
-              try:
-                  branch = repo.heads.main
-              except AttributeError:
-                  print("ValueError")
-                  # raise ValueError("The repository does not have a branch named 'main'.")
-              # Get the list of commits in the branch
-              commits = list(repo.iter_commits(branch.name, max_count=2))
-              if len(commits) < 2:
-                  print("ValueError")
-                  # raise ValueError("There are less than two commits in the 'main' branch.")
-              # The second most recent commit will be the second item in the list
-              second_top_commit = commits[1]
-              return second_top_commit
-          def compare_repositories(repo_list1, repo_list2):
-              changes = {'repositories': []}
-              # Convert list of dictionaries to a list of unique identifiers (name and refspec)
-              def get_repo_identifiers(repo_list):
-                  return {(repo.get('name'), repo.get('refspec')): repo for repo in repo_list}
-              # Convert both lists to identifiers
-              repo_dict1 = get_repo_identifiers(repo_list1)
-              repo_dict2 = get_repo_identifiers(repo_list2)
-              # Find repositories in repo_dict2 that are not in repo_dict1
-              for key, repo in repo_dict2.items():
-                  if key not in repo_dict1:
-                      changes['repositories'].append(repo)
-              # Find repositories that exist in both dicts but have different contents
-              for key in repo_dict1.keys():
-                  if key in repo_dict2 and repo_dict1[key] != repo_dict2[key]:
-                      changes['repositories'].append(repo_dict2[key])
-              # If no changes, return an empty dictionary
-              if not changes['repositories']:
-                  return {}
-              return changes
-          print(main_branch)
-          latest_commit_sha = main_branch.commit.hexsha
-          second_top_commit = get_second_top_commit(repo_path)
-          print('repo and commit details')
-          print(repo_path, latest_commit_sha, second_top_commit)
-          # print(f"Latest commit SHA of 'main': {latest_commit_sha} {second_top_commit}")
-          print(f' Printing commit details: {latest_commit_sha}, {second_top_commit}')
-          try:
-              file_commit_sha = get_file_content_from_commit(repo, latest_commit_sha, file_path)
-              # print(f"Commit SHA of '{file_path}' in the latest commit: {file_commit_sha}")
-          except ValueError:
-              print('valueError')
-              # print(f"File '{file_path}' does not exist in the latest commit {latest_commit_sha}")
-          try:
-              content_old = get_file_content_from_commit(repo, second_top_commit, file_path)
-              content_new = get_file_content_from_commit(repo, latest_commit_sha, file_path)
-          except ValueError as e:
-              print(e)
-          dict_old = load_yaml(content_old)
-          dict_new = load_yaml(content_new)
-          print(dict_old, dict_new)
-          # Extract repositories data from dict1 and dict2
-          repositories1 = dict_old['modules'][0]['repositories']
-          repositories2 = dict_new['modules'][0]['repositories']
-          changed_repositories = compare_repositories(repositories1, repositories2)
-          print(f'Changed repositories: {changed_repositories}')
+          python main.py
+          # # Import hashlib library (md5 method is part of it)
+          # python -c """
+          # import hashlib
+          # import logging
+          # import os
+          # import sys
+          # import git
+          # import yaml
+          # from ruamel.yaml import YAML
+          # import subprocess
+          # from os import listdir
+          # from os.path import isfile, join
+          # import requests
+          # import json
+          # dir_name = os.getcwd()
+          # versioned_ci_repo = f'{dir_name}/tarun-repo-1/'
+          # print('Printing Version CI repo Name')
+          # print(versioned_ci_repo)
+          # repo_path = versioned_ci_repo
+          # repo = git.Repo(repo_path)
+          # main_branch = repo.heads.main
+          # def load_yaml(file_content):
+          #     return yaml.safe_load(file_content)
+          # def get_file_content_from_commit(repo, commit_sha, file_path):
+          #     commit = repo.commit(commit_sha)
+          #     try:
+          #         file_blob = commit.tree[file_path]
+          #         file_content = file_blob.data_stream.read().decode('utf-8')
+          #         return file_content
+          #     except KeyError:
+          #         print("ValueError")
+          #         # raise ValueError(f"File '{file_path}' does not exist in commit {commit_sha}")
+          # def get_second_top_commit(repo_path):
+          #     repo = git.Repo(repo_path)
+          #     try:
+          #         branch = repo.heads.main
+          #     except AttributeError:
+          #         print("ValueError")
+          #         # raise ValueError("The repository does not have a branch named 'main'.")
+          #     # Get the list of commits in the branch
+          #     commits = list(repo.iter_commits(branch.name, max_count=2))
+          #     if len(commits) < 2:
+          #         print("ValueError")
+          #         # raise ValueError("There are less than two commits in the 'main' branch.")
+          #     # The second most recent commit will be the second item in the list
+          #     second_top_commit = commits[1]
+          #     return second_top_commit
+          # def compare_repositories(repo_list1, repo_list2):
+          #     changes = {'repositories': []}
+          #     # Convert list of dictionaries to a list of unique identifiers (name and refspec)
+          #     def get_repo_identifiers(repo_list):
+          #         return {(repo.get('name'), repo.get('refspec')): repo for repo in repo_list}
+          #     # Convert both lists to identifiers
+          #     repo_dict1 = get_repo_identifiers(repo_list1)
+          #     repo_dict2 = get_repo_identifiers(repo_list2)
+          #     # Find repositories in repo_dict2 that are not in repo_dict1
+          #     for key, repo in repo_dict2.items():
+          #         if key not in repo_dict1:
+          #             changes['repositories'].append(repo)
+          #     # Find repositories that exist in both dicts but have different contents
+          #     for key in repo_dict1.keys():
+          #         if key in repo_dict2 and repo_dict1[key] != repo_dict2[key]:
+          #             changes['repositories'].append(repo_dict2[key])
+          #     # If no changes, return an empty dictionary
+          #     if not changes['repositories']:
+          #         return {}
+          #     return changes
+          # print(main_branch)
+          # latest_commit_sha = main_branch.commit.hexsha
+          # second_top_commit = get_second_top_commit(repo_path)
+          # print('repo and commit details')
+          # print(repo_path, latest_commit_sha, second_top_commit)
+          # # print(f"Latest commit SHA of 'main': {latest_commit_sha} {second_top_commit}")
+          # print(f' Printing commit details: {latest_commit_sha}, {second_top_commit}')
+          # try:
+          #     file_commit_sha = get_file_content_from_commit(repo, latest_commit_sha, file_path)
+          #     # print(f"Commit SHA of '{file_path}' in the latest commit: {file_commit_sha}")
+          # except ValueError:
+          #     print('valueError')
+          #     # print(f"File '{file_path}' does not exist in the latest commit {latest_commit_sha}")
+          # try:
+          #     content_old = get_file_content_from_commit(repo, second_top_commit, file_path)
+          #     content_new = get_file_content_from_commit(repo, latest_commit_sha, file_path)
+          # except ValueError as e:
+          #     print(e)
+          # dict_old = load_yaml(content_old)
+          # dict_new = load_yaml(content_new)
+          # print(dict_old, dict_new)
+          # # Extract repositories data from dict1 and dict2
+          # repositories1 = dict_old['modules'][0]['repositories']
+          # repositories2 = dict_new['modules'][0]['repositories']
+          # changed_repositories = compare_repositories(repositories1, repositories2)
+          # print(f'Changed repositories: {changed_repositories}')
           """
