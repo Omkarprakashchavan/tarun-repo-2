@@ -1,0 +1,1922 @@
+Generic:
+  - name: 'properties'
+    org-name: 'GreenLake'
+    api-url: 'https://vtn.hpecorp.net/api'
+    devops-bot:
+     - bot.glcp@hpe.com
+    devops-users:
+     - bharani.batna@hpe.com
+     - tarun-kumar-reddy.ram@hpe.com
+Projects:
+#######################################################################################################################
+##### Sample project Mandatory entries
+# You can either provide dist-list or mgr-list&nonmgr-list , when you provide mgr and nonmgr list the distribution list will be created.
+# dist-list is a distribution list available within VTN.
+# If you provide mgr-list and nonmgr-list a distribution list is created within VTN as mci-"app_name"
+#  - name: 'platform-analytics-ingest-etl'
+#    product-name: 'platform-analytics-streaming-etl-app'
+#    product-version: '1.0.0'
+#    mgr-list:
+#      - *****@hpe.com
+#    nonmgr-list:
+#      - *****@hpe.com
+#      - *****@hpe.com
+###### Sample project optional entries
+# If you have a known product-master-name and product-oid. Refer to VTN user guide for these(Defaulted to NA)
+#    product-master-name: "platform-analytics"
+#    product-oid: "1234"
+#######################################################################################################################
+
+  - name: 'platform-analytics-ingest-etl'
+    product-name: 'platformanalytics-metricscollector-etl-app'
+    product-version: '1.0.0'
+    mgr-list:
+      - shantanu.chatterjee@hpe.com
+    nonmgr-list:
+      - manoharp@hpe.com
+  - name: 'service-identity'
+    product-name: 'service-identity'
+    product-version: '1.0.0'
+    mgr-list:
+      - andrew.m.pitman@hpe.com
+    nonmgr-list:
+      - eugene.cheverda@hpe.com
+  - name: 'service-identity'
+    product-name: 'token-exchange'
+    product-version: '1.0.0'
+    mgr-list:
+      - andrew.m.pitman@hpe.com
+    nonmgr-list:
+      - eugene.cheverda@hpe.com
+  - name: 'service-identity'
+    product-name: 'api-clients'
+    product-version: '1.0.0'
+    mgr-list:
+      - andrew.m.pitman@hpe.com
+    nonmgr-list:
+      - eugene.cheverda@hpe.com
+  - name: 'service-identity'
+    product-name: 'oauth-issuer'
+    product-version: '1.0.0'
+    mgr-list:
+      - andrew.m.pitman@hpe.com
+    nonmgr-list:
+      - eugene.cheverda@hpe.com
+  - name: 'subscription-management'
+    product-name: 'subscription-management'
+    product-version: '1.0.0'
+    mgr-list:
+      - bhaskar.bhattacharjee@hpe.com
+      - avyas@hpe.com
+      - savitha.amarnath@hpe.com
+      - yinchao.guo@hpe.com
+    nonmgr-list:
+      - firdousi.farozan@hpe.com
+      - hemant.kumar8@hpe.com
+      - anirudha.shinde@hpe.com
+      - mohan-reddy.maligi-reddy@hpe.com
+      - veena.y.dong@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+  - name: 'subscription-management'
+    product-name: 'subscription-management-automation'
+    product-version: '1.0.0'
+    mgr-list:
+      - bhaskar.bhattacharjee@hpe.com
+      - avyas@hpe.com
+      - savitha.amarnath@hpe.com
+      - yinchao.guo@hpe.com
+    nonmgr-list:
+      - firdousi.farozan@hpe.com
+      - hemant.kumar8@hpe.com
+      - anirudha.shinde@hpe.com
+      - mohan-reddy.maligi-reddy@hpe.com
+      - veena.y.dong@hpe.com
+  - name: 'authz-svc'
+    product-name: 'authz-svc'
+    product-version: '1.0.0'
+    mgr-list:
+      - chuck.fuqua@hpe.com
+      - rabih.filfili@hpe.com
+    nonmgr-list:
+      - uchenna.madu@hpe.com
+      - guilherme.magalhaes@hpe.com
+  - name: 'authz-svc'
+    product-name: 'authz-svc-fips'
+    product-version: '1.0.0'
+    mgr-list:
+      - chuck.fuqua@hpe.com
+      - rabih.filfili@hpe.com
+    nonmgr-list:
+      - uchenna.madu@hpe.com
+      - guilherme.magalhaes@hpe.com
+  - name: 'authz-svc'
+    product-name: 'authz-svc-automation'
+    product-version: '1.0.0'
+    mgr-list:
+      - chuck.fuqua@hpe.com
+      - rabih.filfili@hpe.com
+    nonmgr-list:
+      - uchenna.madu@hpe.com
+      - guilherme.magalhaes@hpe.com
+  - name: 'authz-svc'
+    product-name: 'authz-svc-events'
+    product-version: '1.0.0'
+    mgr-list:
+      - chuck.fuqua@hpe.com
+      - rabih.filfili@hpe.com
+    nonmgr-list:
+      - uchenna.madu@hpe.com
+      - guilherme.magalhaes@hpe.com
+  - name: 'authz-svc'
+    product-name: 'authz-svc-enforce'
+    product-version: '1.0.0'
+    mgr-list:
+      - chuck.fuqua@hpe.com
+      - rabih.filfili@hpe.com
+    nonmgr-list:
+      - uchenna.madu@hpe.com
+      - guilherme.magalhaes@hpe.com
+      - cshine@hpe.com
+  - name: 'authz-lib'
+    product-name: 'fs'
+    product-version: '1.0.0'
+    mgr-list:
+      - chuck.fuqua@hpe.com
+      - rabih.filfili@hpe.com
+    nonmgr-list:
+      - uchenna.madu@hpe.com
+      - raghav.babu-subramanian@hpe.com
+      - deepak.yammanur@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+      - satya-srinija.kanteti@hpe.com
+      - joe.zhou@hpe.com
+      - jeffrey.jin@hpe.com
+  - name: 'authz'
+    product-name: 'authz'
+    product-version: '1.0.0'
+    mgr-list:
+      - chuck.fuqua@hpe.com
+      - rabih.filfili@hpe.com
+    nonmgr-list:
+      - uchenna.madu@hpe.com
+      - raghav.babu-subramanian@hpe.com
+      - deepak.yammanur@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+      - satya-srinija.kanteti@hpe.com
+      - joe.zhou@hpe.com
+      - jeffrey.jin@hpe.com
+  - name: 'authz'
+    product-name: 'authz-fips'
+    product-version: '1.0.0'
+    mgr-list:
+      - chuck.fuqua@hpe.com
+      - rabih.filfili@hpe.com
+    nonmgr-list:
+      - uchenna.madu@hpe.com
+      - raghav.babu-subramanian@hpe.com
+      - deepak.yammanur@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+      - satya-srinija.kanteti@hpe.com
+      - joe.zhou@hpe.com
+      - jeffrey.jin@hpe.com
+      - anitha.kamasetty@hpe.com
+  - name: 'authz'
+    product-name: 'authz-automation'
+    product-version: '1.0.0'
+    mgr-list:
+      - chuck.fuqua@hpe.com
+      - rabih.filfili@hpe.com
+    nonmgr-list:
+      - uchenna.madu@hpe.com
+      - raghav.babu-subramanian@hpe.com
+      - deepak.yammanur@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+      - satya-srinija.kanteti@hpe.com
+      - joe.zhou@hpe.com
+      - jeffrey.jin@hpe.com
+  - name: 'groups-v1'
+    product-name: 'groups-v1'
+    product-version: '1.0.0'
+    mgr-list:
+      - chuck.fuqua@hpe.com
+      - rabih.filfili@hpe.com
+    nonmgr-list:
+      - uchenna.madu@hpe.com
+      - raghav.babu-subramanian@hpe.com
+      - deepak.yammanur@hpe.com
+      - satya-srinija.kanteti@hpe.com
+      - joe.zhou@hpe.com
+      - jeffrey.jin@hpe.com
+  - name: 'groups-v1'
+    product-name: 'groups-v1-fips'
+    product-version: '1.0.0'
+    mgr-list:
+      - chuck.fuqua@hpe.com
+      - rabih.filfili@hpe.com
+    nonmgr-list:
+      - uchenna.madu@hpe.com
+      - raghav.babu-subramanian@hpe.com
+      - deepak.yammanur@hpe.com
+      - satya-srinija.kanteti@hpe.com
+      - joe.zhou@hpe.com
+      - jeffrey.jin@hpe.com
+  - name: 'groups-v1'
+    product-name: 'groups-v1-automation'
+    product-version: '1.0.0'
+    mgr-list:
+      - chuck.fuqua@hpe.com
+      - rabih.filfili@hpe.com
+    nonmgr-list:
+      - uchenna.madu@hpe.com
+      - raghav.babu-subramanian@hpe.com
+      - deepak.yammanur@hpe.com
+      - satya-srinija.kanteti@hpe.com
+      - joe.zhou@hpe.com
+      - jeffrey.jin@hpe.com
+  - name: 'harmony-data-plane'
+    product-name: 'harmony-data-plane_deployment-manager'
+    product-version: '1.0.0'
+    mgr-list:
+      - andrew.m.pitman@hpe.com
+      - jesu-darison.gerard-fernando@hpe.com
+      - umesh.pathak@hpe.com
+    nonmgr-list:
+      - eugene.cheverda@hpe.com
+      - keaton.rob.smith@hpe.com
+      - naveen.nagarajaiah@hpe.com
+      - kyrylo.iun@hpe.com
+  - name: 'harmony-data-plane'
+    product-name: 'harmony-data-plane_rda-hauler'
+    product-version: '1.0.0'
+    mgr-list:
+      - andrew.m.pitman@hpe.com
+      - jesu-darison.gerard-fernando@hpe.com
+      - umesh.pathak@hpe.com
+    nonmgr-list:
+      - eugene.cheverda@hpe.com
+      - keaton.rob.smith@hpe.com
+      - naveen.nagarajaiah@hpe.com
+      - kyrylo.iun@hpe.com
+  - name: 'harmony-data-plane'
+    product-name: 'harmony-data-plane_data-catalog'
+    product-version: '1.0.0'
+    mgr-list:
+      - andrew.m.pitman@hpe.com
+      - jesu-darison.gerard-fernando@hpe.com
+      - umesh.pathak@hpe.com
+    nonmgr-list:
+      - eugene.cheverda@hpe.com
+      - keaton.rob.smith@hpe.com
+      - naveen.nagarajaiah@hpe.com
+      - kyrylo.iun@hpe.com
+  - name: 'harmony-data-plane'
+    product-name: 'harmony-data-plane_access-manager'
+    product-version: '1.0.0'
+    mgr-list:
+      - andrew.m.pitman@hpe.com
+      - jesu-darison.gerard-fernando@hpe.com
+      - umesh.pathak@hpe.com
+    nonmgr-list:
+      - eugene.cheverda@hpe.com
+      - keaton.rob.smith@hpe.com
+      - naveen.nagarajaiah@hpe.com
+      - kyrylo.iun@hpe.com
+  - name: 'harmony-data-plane'
+    product-name: 'harmony-data-plane_asset-manager'
+    product-version: '1.0.0'
+    mgr-list:
+      - andrew.m.pitman@hpe.com
+      - jesu-darison.gerard-fernando@hpe.com
+      - umesh.pathak@hpe.com
+    nonmgr-list:
+      - eugene.cheverda@hpe.com
+      - keaton.rob.smith@hpe.com
+      - naveen.nagarajaiah@hpe.com
+      - kyrylo.iun@hpe.com
+  - name: 'harmony-data-plane'
+    product-name: 'harmony-data-plane_access-manager-aws-controller'
+    product-version: '1.0.0'
+    mgr-list:
+      - andrew.m.pitman@hpe.com
+      - jesu-darison.gerard-fernando@hpe.com
+      - umesh.pathak@hpe.com
+    nonmgr-list:
+      - eugene.cheverda@hpe.com
+      - keaton.rob.smith@hpe.com
+      - naveen.nagarajaiah@hpe.com
+      - kyrylo.iun@hpe.com
+  - name: 'harmony-data-plane'
+    product-name: 'harmony-data-plane_kafka-rest'
+    product-version: '1.0.0'
+    mgr-list:
+      - andrew.m.pitman@hpe.com
+      - jesu-darison.gerard-fernando@hpe.com
+      - umesh.pathak@hpe.com
+    nonmgr-list:
+      - eugene.cheverda@hpe.com
+      - keaton.rob.smith@hpe.com
+      - naveen.nagarajaiah@hpe.com
+      - kyrylo.iun@hpe.com
+  - name: 'melody-functions'
+    product-name: 'melody-data-plane_stream-copy'
+    product-version: '1.0.0'
+    mgr-list:
+      - andrew.m.pitman@hpe.com
+      - jesu-darison.gerard-fernando@hpe.com
+      - umesh.pathak@hpe.com
+    nonmgr-list:
+      - eugene.cheverda@hpe.com
+      - keaton.rob.smith@hpe.com
+      - naveen.nagarajaiah@hpe.com
+      - kyrylo.iun@hpe.com
+  - name: 'melody-bi-interface'
+    product-name: 'melody-bi-interface'
+    product-version: '1.0.0'
+    mgr-list:
+      - andrew.m.pitman@hpe.com
+      - jesu-darison.gerard-fernando@hpe.com
+      - umesh.pathak@hpe.com
+    nonmgr-list:
+      - eugene.cheverda@hpe.com
+      - keaton.rob.smith@hpe.com
+      - naveen.nagarajaiah@hpe.com
+      - jason.mack2@hpe.com
+      - kyrylo.iun@hpe.com
+  - name: 'harmony-etl-sdk-golang'
+    product-name: 'fs'
+    product-version: '1.0.0'
+    mgr-list:
+      - andrew.m.pitman@hpe.com
+      - jesu-darison.gerard-fernando@hpe.com
+      - umesh.pathak@hpe.com
+    nonmgr-list:
+      - eugene.cheverda@hpe.com
+      - keaton.rob.smith@hpe.com
+      - naveen.nagarajaiah@hpe.com
+      - kyrylo.iun@hpe.com
+      - sudhakar.patibandla@hpe.com
+  - name: 'trino-go-client'
+    product-name: 'melody-data-plane_trino-go-client'
+    product-version: '1.0.0'
+    mgr-list:
+      - andrew.m.pitman@hpe.com
+      - jesu-darison.gerard-fernando@hpe.com
+      - umesh.pathak@hpe.com
+    nonmgr-list:
+      - eugene.cheverda@hpe.com
+      - keaton.rob.smith@hpe.com
+      - naveen.nagarajaiah@hpe.com
+      - kyrylo.iun@hpe.com
+  - name: 'harmony-predef'
+    product-name: 'projector'
+    product-version: '1.0.0'
+    mgr-list:
+      - andrew.m.pitman@hpe.com
+      - jesu-darison.gerard-fernando@hpe.com
+      - umesh.pathak@hpe.com
+    nonmgr-list:
+      - ranjana.bongale-ganesh@hpe.com
+      - eugene.cheverda@hpe.com
+      - keaton.rob.smith@hpe.com
+      - naveen.nagarajaiah@hpe.com
+      - kyrylo.iun@hpe.com
+  - name: 'harmony-predef'
+    product-name: 'auto-lifter'
+    product-version: '1.0.0'
+    mgr-list:
+      - andrew.m.pitman@hpe.com
+      - jesu-darison.gerard-fernando@hpe.com
+      - umesh.pathak@hpe.com
+    nonmgr-list:
+      - ranjana.bongale-ganesh@hpe.com
+      - eugene.cheverda@hpe.com
+      - keaton.rob.smith@hpe.com
+      - naveen.nagarajaiah@hpe.com
+      - kyrylo.iun@hpe.com
+  - name: 'harmony-pysparkjobs'
+    product-name: 'mycustompythonspark-app'
+    product-version: '1.0.0'
+    mgr-list:
+      - andrew.m.pitman@hpe.com
+      - jesu-darison.gerard-fernando@hpe.com
+      - umesh.pathak@hpe.com
+    nonmgr-list:
+      - ranjana.bongale-ganesh@hpe.com
+      - eugene.cheverda@hpe.com
+      - keaton.rob.smith@hpe.com
+      - naveen.nagarajaiah@hpe.com
+      - kyrylo.iun@hpe.com
+  - name: 'harmony-archives'
+    product-name: 'query-service'
+    product-version: '1.0.0'
+    mgr-list:
+      - andrew.m.pitman@hpe.com
+      - jesu-darison.gerard-fernando@hpe.com
+      - umesh.pathak@hpe.com
+    nonmgr-list:
+      - ranjana.bongale-ganesh@hpe.com
+      - eugene.cheverda@hpe.com
+      - keaton.rob.smith@hpe.com
+      - naveen.nagarajaiah@hpe.com
+      - kyrylo.iun@hpe.com
+  - name: 'harmony-archives'
+    product-name: 'catapult'
+    product-version: '1.0.0'
+    mgr-list:
+      - andrew.m.pitman@hpe.com
+      - jesu-darison.gerard-fernando@hpe.com
+      - umesh.pathak@hpe.com
+    nonmgr-list:
+      - ranjana.bongale-ganesh@hpe.com
+      - eugene.cheverda@hpe.com
+      - keaton.rob.smith@hpe.com
+      - naveen.nagarajaiah@hpe.com
+      - kyrylo.iun@hpe.com
+  - name: 'harmony-archives'
+    product-name: 'events-updater-service'
+    product-version: '1.0.0'
+    mgr-list:
+      - andrew.m.pitman@hpe.com
+      - jesu-darison.gerard-fernando@hpe.com
+      - umesh.pathak@hpe.com
+    nonmgr-list:
+      - ranjana.bongale-ganesh@hpe.com
+      - eugene.cheverda@hpe.com
+      - keaton.rob.smith@hpe.com
+      - naveen.nagarajaiah@hpe.com
+      - kyrylo.iun@hpe.com
+  - name: 'harmony-archives'
+    product-name: 'raw-file-listener'
+    product-version: '1.0.0'
+    mgr-list:
+      - andrew.m.pitman@hpe.com
+      - jesu-darison.gerard-fernando@hpe.com
+      - umesh.pathak@hpe.com
+    nonmgr-list:
+      - ranjana.bongale-ganesh@hpe.com
+      - eugene.cheverda@hpe.com
+      - keaton.rob.smith@hpe.com
+      - naveen.nagarajaiah@hpe.com
+      - kyrylo.iun@hpe.com
+  - name: 'harmony-archives'
+    product-name: 'update-service'
+    product-version: '1.0.0'
+    mgr-list:
+      - andrew.m.pitman@hpe.com
+      - jesu-darison.gerard-fernando@hpe.com
+      - umesh.pathak@hpe.com
+    nonmgr-list:
+      - ranjana.bongale-ganesh@hpe.com
+      - eugene.cheverda@hpe.com
+      - keaton.rob.smith@hpe.com
+      - naveen.nagarajaiah@hpe.com
+      - kyrylo.iun@hpe.com
+  - name: 'harmony-message-ingest'
+    product-name: 'message-ingest-update'
+    product-version: '1.0.0'
+    mgr-list:
+      - andrew.m.pitman@hpe.com
+      - jesu-darison.gerard-fernando@hpe.com
+      - umesh.pathak@hpe.com
+    nonmgr-list:
+      - ranjana.bongale-ganesh@hpe.com
+      - eugene.cheverda@hpe.com
+      - keaton.rob.smith@hpe.com
+      - naveen.nagarajaiah@hpe.com
+      - kyrylo.iun@hpe.com
+  - name: 'harmony-message-ingest'
+    product-name: 'sync-ingest-service'
+    product-version: '1.0.0'
+    mgr-list:
+      - andrew.m.pitman@hpe.com
+      - jesu-darison.gerard-fernando@hpe.com
+      - umesh.pathak@hpe.com
+    nonmgr-list:
+      - ranjana.bongale-ganesh@hpe.com
+      - eugene.cheverda@hpe.com
+      - keaton.rob.smith@hpe.com
+      - naveen.nagarajaiah@hpe.com
+      - kyrylo.iun@hpe.com
+  - name: 'harmony-hauler'
+    product-name: 'hauler-app'
+    product-version: '1.0.0'
+    mgr-list:
+      - andrew.m.pitman@hpe.com
+      - jesu-darison.gerard-fernando@hpe.com
+      - umesh.pathak@hpe.com
+    nonmgr-list:
+      - ranjana.bongale-ganesh@hpe.com
+      - eugene.cheverda@hpe.com
+      - keaton.rob.smith@hpe.com
+      - naveen.nagarajaiah@hpe.com
+      - kyrylo.iun@hpe.com
+  - name: 'harmony-uploadServer'
+    product-name: 'uploadserver-app'
+    product-version: '1.0.0'
+    mgr-list:
+      - andrew.m.pitman@hpe.com
+      - jesu-darison.gerard-fernando@hpe.com
+      - umesh.pathak@hpe.com
+    nonmgr-list:
+      - ranjana.bongale-ganesh@hpe.com
+      - eugene.cheverda@hpe.com
+      - keaton.rob.smith@hpe.com
+      - naveen.nagarajaiah@hpe.com
+      - kyrylo.iun@hpe.com
+  - name: 'harmony-avalanche'
+    product-name: 'avalanche-app'
+    product-version: '1.0.0'
+    mgr-list:
+      - andrew.m.pitman@hpe.com
+      - jesu-darison.gerard-fernando@hpe.com
+      - umesh.pathak@hpe.com
+    nonmgr-list:
+      - ranjana.bongale-ganesh@hpe.com
+      - eugene.cheverda@hpe.com
+      - keaton.rob.smith@hpe.com
+      - naveen.nagarajaiah@hpe.com
+      - kyrylo.iun@hpe.com
+  - name: 'harmony-customsparkjobs'
+    product-name: 'customsparkjobs-app'
+    product-version: '1.0.0'
+    mgr-list:
+      - andrew.m.pitman@hpe.com
+      - jesu-darison.gerard-fernando@hpe.com
+      - umesh.pathak@hpe.com
+    nonmgr-list:
+      - ranjana.bongale-ganesh@hpe.com
+      - eugene.cheverda@hpe.com
+      - keaton.rob.smith@hpe.com
+      - naveen.nagarajaiah@hpe.com
+      - kyrylo.iun@hpe.com
+  - name: 'harmony-db-sharding-service'
+    product-name: 'dbsharding-service'
+    product-version: '1.0.0'
+    mgr-list:
+      - andrew.m.pitman@hpe.com
+      - jesu-darison.gerard-fernando@hpe.com
+      - umesh.pathak@hpe.com
+    nonmgr-list:
+      - ranjana.bongale-ganesh@hpe.com
+      - eugene.cheverda@hpe.com
+      - keaton.rob.smith@hpe.com
+      - naveen.nagarajaiah@hpe.com
+      - kyrylo.iun@hpe.com
+  - name: 'harmony-uploadServer'
+    product-name: 'uploadserver-app'
+    product-version: '1.0.0'
+    mgr-list:
+     - andrew.m.pitman@hpe.com
+      - jesu-darison.gerard-fernando@hpe.com
+      - umesh.pathak@hpe.com
+    nonmgr-list:
+      - ranjana.bongale-ganesh@hpe.com
+      - eugene.cheverda@hpe.com
+      - keaton.rob.smith@hpe.com
+      - naveen.nagarajaiah@hpe.com
+      - kyrylo.iun@hpe.com
+  - name: 'harmony-message-egress'
+    product-name: 'harmony-message-egress'
+    product-version: '1.0.0'
+    mgr-list:
+      - andrew.m.pitman@hpe.com
+      - jesu-darison.gerard-fernando@hpe.com
+      - umesh.pathak@hpe.com
+    nonmgr-list:
+      - ranjana.bongale-ganesh@hpe.com
+      - eugene.cheverda@hpe.com
+      - keaton.rob.smith@hpe.com
+      - naveen.nagarajaiah@hpe.com
+      - kyrylo.iun@hpe.com
+  - name: 'harmony-metadata'
+    product-name: 'metadata-svc'
+    product-version: '1.0.0'
+    mgr-list:
+      - andrew.m.pitman@hpe.com
+      - jesu-darison.gerard-fernando@hpe.com
+      - umesh.pathak@hpe.com
+    nonmgr-list:
+      - ranjana.bongale-ganesh@hpe.com
+      - eugene.cheverda@hpe.com
+      - keaton.rob.smith@hpe.com
+      - naveen.nagarajaiah@hpe.com
+      - kyrylo.iun@hpe.com
+  - name: 'tracing-proxy'
+    product-name: 'tracing-proxy'
+    product-version: '16.0.0'
+    mgr-list:
+      - branislav.ivanic@hpe.com
+    nonmgr-list:
+      - oksana.lushina@hpe.com
+  - name: 'harmony-pal'
+    product-name: 'harmony-pal-data'
+    product-version: '1.0.0'
+    mgr-list:
+      - andrew.m.pitman@hpe.com
+      - jesu-darison.gerard-fernando@hpe.com
+      - umesh.pathak@hpe.com
+    nonmgr-list:
+      - ranjana.bongale-ganesh@hpe.com
+      - eugene.cheverda@hpe.com
+      - keaton.rob.smith@hpe.com
+      - naveen.nagarajaiah@hpe.com
+      - kyrylo.iun@hpe.com
+  - name: 'service-registry'
+    product-name: 'service-registry'
+    product-version: '1.0.0'
+    mgr-list:
+      - khairwar@hpe.com
+      - premkumar.kannan@hpe.com
+    nonmgr-list:
+      - vilakshan-varma.ande@hpe.com
+      - sagar.bhanagay@hpe.com
+  - name: 'service-registry'
+    product-name: 'service-registry-automation'
+    product-version: '1.0.0'
+    mgr-list:
+      - khairwar@hpe.com
+      - premkumar.kannan@hpe.com
+    nonmgr-list:
+      - vilakshan-varma.ande@hpe.com
+      - sagar.bhanagay@hpe.com
+  - name: 'service-provision'
+    product-name: 'service-provision'
+    product-version: '1.0.0'
+    mgr-list:
+      - khairwar@hpe.com
+      - premkumar.kannan@hpe.com
+    nonmgr-list:
+      - vilakshan-varma.ande@hpe.com
+      - sagar.bhanagay@hpe.com
+      - koushal.kh@hpe.com
+  - name: 'service-provision'
+    product-name: 'service-provision-automation'
+    product-version: '1.0.0'
+    mgr-list:
+      - khairwar@hpe.com
+      - premkumar.kannan@hpe.com
+    nonmgr-list:
+      - vilakshan-varma.ande@hpe.com
+      - sagar.bhanagay@hpe.com
+      - koushal.kh@hpe.com
+  - name: 'onprem-apps'
+    product-name: 'fs'
+    product-version: '1.0.0'
+    mgr-list:
+      - lakshmanarajan.savadamuthu@hpe.com
+    nonmgr-list:
+      - sridhar.parvathala@hpe.com
+  - name: 'onprem-apps'
+    product-name: 'amt'
+    product-version: '1.0.0'
+    mgr-list:
+      - lakshmanarajan.savadamuthu@hpe.com
+    nonmgr-list:
+      - sridhar.parvathala@hpe.com
+  - name: 'app-catalog'
+    product-name: 'app-catalog'
+    product-version: '1.0.0'
+    mgr-list:
+      - premkumar.kannan@hpe.com
+      - khairwar@hpe.com
+    nonmgr-list:
+      - sagar.bhanagay@hpe.com
+      - kiran.hodlur@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+      - shivam.kesarwani@hpe.com
+  - name: 'app-catalog'
+    product-name: 'app-catalog-fips'
+    product-version: '1.0.0'
+    mgr-list:
+      - premkumar.kannan@hpe.com
+      - khairwar@hpe.com
+    nonmgr-list:
+      - sagar.bhanagay@hpe.com
+      - kiran.hodlur@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+      - shivam.kesarwani@hpe.com
+  - name: 'app-catalog'
+    product-name: 'app-catalog-automation'
+    product-version: '1.0.0'
+    mgr-list:
+      - premkumar.kannan@hpe.com
+      - khairwar@hpe.com
+    nonmgr-list:
+      - sagar.bhanagay@hpe.com
+      - kiran.hodlur@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+      - shivam.kesarwani@hpe.com
+  - name: 'app-provision'
+    product-name: 'app-provision'
+    product-version: '1.0.0'
+    mgr-list:
+      - premkumar.kannan@hpe.com
+      - khairwar@hpe.com
+    nonmgr-list:
+      - sagar.bhanagay@hpe.com
+      - kiran.hodlur@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+      - shivam.kesarwani@hpe.com
+  - name: 'app-provision'
+    product-name: 'app-provision-fips'
+    product-version: '1.0.0'
+    mgr-list:
+      - premkumar.kannan@hpe.com
+      - khairwar@hpe.com
+    nonmgr-list:
+      - sagar.bhanagay@hpe.com
+      - kiran.hodlur@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+      - shivam.kesarwani@hpe.com
+  - name: 'app-provision'
+    product-name: 'app-provision-automation'
+    product-version: '1.0.0'
+    mgr-list:
+      - premkumar.kannan@hpe.com
+      - khairwar@hpe.com
+    nonmgr-list:
+      - sagar.bhanagay@hpe.com
+      - kiran.hodlur@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+      - shivam.kesarwani@hpe.com
+  - name: 'geo'
+    product-name: 'geo'
+    product-version: '1.0.0'
+    mgr-list:
+      - premkumar.kannan@hpe.com
+      - khairwar@hpe.com
+    nonmgr-list:
+      - sagar.bhanagay@hpe.com
+      - kiran.hodlur@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+      - shivam.kesarwani@hpe.com
+  - name: 'geo'
+    product-name: 'geo-fips'
+    product-version: '1.0.0'
+    mgr-list:
+      - premkumar.kannan@hpe.com
+      - khairwar@hpe.com
+    nonmgr-list:
+      - sagar.bhanagay@hpe.com
+      - kiran.hodlur@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+      - shivam.kesarwani@hpe.com
+  - name: 'geo'
+    product-name: 'geo-automation'
+    product-version: '1.0.0'
+    mgr-list:
+      - premkumar.kannan@hpe.com
+      - khairwar@hpe.com
+    nonmgr-list:
+      - sagar.bhanagay@hpe.com
+      - kiran.hodlur@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+      - shivam.kesarwani@hpe.com
+  - name: 'msg-worker'
+    product-name: 'msg-worker'
+    product-version: '1.0.0'
+    mgr-list:
+      - premkumar.kannan@hpe.com
+      - khairwar@hpe.com
+    nonmgr-list:
+      - campbell.sinclair@hpe.com
+      - kiran.hodlur@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+  - name: 'msg-worker'
+    product-name: 'msg-worker-fips'
+    product-version: '1.0.0'
+    mgr-list:
+      - premkumar.kannan@hpe.com
+      - khairwar@hpe.com
+    nonmgr-list:
+      - campbell.sinclair@hpe.com
+      - kiran.hodlur@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+  - name: 'msg-worker'
+    product-name: 'msg-worker-automation'
+    product-version: '1.0.0'
+    mgr-list:
+      - premkumar.kannan@hpe.com
+      - khairwar@hpe.com
+    nonmgr-list:
+      - campbell.sinclair@hpe.com
+      - kiran.hodlur@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+  - name: 'event-publisher'
+    product-name: 'event-publisher'
+    product-version: '1.0.0'
+    mgr-list:
+      - premkumar.kannan@hpe.com
+      - khairwar@hpe.com
+    nonmgr-list:
+      - campbell.sinclair@hpe.com
+      - kiran.hodlur@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+  - name: 'event-publisher'
+    product-name: 'event-publisher-fips'
+    product-version: '1.0.0'
+    mgr-list:
+      - premkumar.kannan@hpe.com
+      - khairwar@hpe.com
+    nonmgr-list:
+      - campbell.sinclair@hpe.com
+      - kiran.hodlur@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+  - name: 'event-publisher'
+    product-name: 'event-publisher-automation'
+    product-version: '1.0.0'
+    mgr-list:
+      - premkumar.kannan@hpe.com
+      - khairwar@hpe.com
+    nonmgr-list:
+      - campbell.sinclair@hpe.com
+      - kiran.hodlur@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+  - name: 'gts-compliance'
+    product-name: 'gts-compliance'
+    product-version: '1.0.0'
+    mgr-list:
+      - premkumar.kannan@hpe.com
+      - khairwar@hpe.com
+    nonmgr-list:
+      - manushri@hpe.com
+      - sakshi.jain@hpe.com
+  - name: 'gts-compliance'
+    product-name: 'gts-compliance-fips'
+    product-version: '1.0.0'
+    mgr-list:
+      - premkumar.kannan@hpe.com
+      - khairwar@hpe.com
+    nonmgr-list:
+      - manushri@hpe.com
+      - sakshi.jain@hpe.com
+  - name: 'gts-compliance'
+    product-name: 'gts-compliance-automation'
+    product-version: '1.0.0'
+    mgr-list:
+      - premkumar.kannan@hpe.com
+      - khairwar@hpe.com
+    nonmgr-list:
+      - manushri@hpe.com
+      - sakshi.jain@hpe.com
+  - name: 'user-group-management'
+    product-name: 'user-group-management'
+    product-version: '1.0.0'
+    mgr-list:
+      - julia.kohav@hpe.com
+    nonmgr-list:
+      - aadams@hpe.com
+      - joaquims@hpe.com
+      - gustavo.ber.brand@hpe.com
+      - tom.buckethal@hpe.com
+      - ryan.dixon@hpe.com
+      - zach.walsh@hpe.com
+  - name: 'orgs-base'
+    product-name: 'orgs-base'
+    product-version: '1.0.0'
+    mgr-list:
+      - mike.lind@hpe.com
+      - julia.kohav@hpe.com
+    nonmgr-list:
+      - gurleen-kaur.gill@hpe.com
+      - sidnei.franco@hpe.com
+      - gustavo.knuppe@hpe.com
+      - craig.bryant@hpe.com
+      - jordan.rasch@hpe.com
+  - name: 'orgs-scim'
+    product-name: 'orgs-scim'
+    product-version: '1.0.0'
+    mgr-list:
+      - mike.lind@hpe.com
+      - julia.kohav@hpe.com
+    nonmgr-list:
+      - gurleen-kaur.gill@hpe.com
+      - sidnei.franco@hpe.com
+      - gustavo.knuppe@hpe.com
+      - craig.bryant@hpe.com
+      - jordan.rasch@hpe.com
+  - name: 'orgs-token-svc'
+    product-name: 'orgs-token-svc'
+    product-version: '1.0.0'
+    mgr-list:
+      - mike.lind@hpe.com
+      - julia.kohav@hpe.com
+    nonmgr-list:
+      - gurleen-kaur.gill@hpe.com
+      - sidnei.franco@hpe.com
+      - gustavo.knuppe@hpe.com
+      - craig.bryant@hpe.com
+      - jordan.rasch@hpe.com
+  - name: 'orgs-okta-keys'
+    product-name: 'orgs-okta-keys'
+    product-version: '1.0.0'
+    mgr-list:
+      - mike.lind@hpe.com
+      - julia.kohav@hpe.com
+    nonmgr-list:
+      - gurleen-kaur.gill@hpe.com
+      - sidnei.franco@hpe.com
+      - gustavo.knuppe@hpe.com
+      - craig.bryant@hpe.com
+      - jordan.rasch@hpe.com
+  - name: 'workspace-association-manager'
+    product-name: 'workspace-association-manager'
+    product-version: '1.0.0'
+    mgr-list:
+      - mike.lind@hpe.com
+      - julia.kohav@hpe.com
+    nonmgr-list:
+      - gurleen-kaur.gill@hpe.com
+      - sidnei.franco@hpe.com
+      - gustavo.knuppe@hpe.com
+      - craig.bryant@hpe.com
+      - jordan.rasch@hpe.com
+  - name: 'orgs-provisioning'
+    product-name: 'orgs-provisioning'
+    product-version: '1.0.0'
+    mgr-list:
+      - mike.lind@hpe.com
+      - julia.kohav@hpe.com
+    nonmgr-list:
+      - gurleen-kaur.gill@hpe.com
+      - sidnei.franco@hpe.com
+      - gustavo.knuppe@hpe.com
+      - craig.bryant@hpe.com
+      - jordan.rasch@hpe.com
+  - name: 'tag-repository'
+    product-name: 'tag-repository'
+    product-version: '1.0.0'
+    mgr-list:
+      - yinchao.guo@hpe.com
+    nonmgr-list:
+      - mohan-reddy.maligi-reddy@hpe.com
+      - kartikey.dubey@hpe.com
+      - amit.yadav@hpe.com
+      - dhananjay.sachdeva@hpe.com
+      - diyuan.zhu@hpe.com
+  - name: 'tag-repository'
+    product-name: 'tag-repository-automation'
+    product-version: '1.0.0'
+    mgr-list:
+      - yinchao.guo@hpe.com
+    nonmgr-list:
+      - mohan-reddy.maligi-reddy@hpe.com
+      - kartikey.dubey@hpe.com
+      - amit.yadav@hpe.com
+      - dhananjay.sachdeva@hpe.com
+      - diyuan.zhu@hpe.com
+  - name: 'orgs-identity-center'
+    product-name: 'orgs-identity-center'
+    product-version: '1.0.0'
+    mgr-list:
+      - saravana-kumar.sundarraj@hpe.com
+      - sburke@hpe.com
+    nonmgr-list:
+      - gary.healy@hpe.com
+      - barry.obrien@hpe.com
+      - berchris.requiao@hpe.com
+      - cyiaph.mccann@hpe.com
+      - hang@hpe.com
+      - mrigank.vashist@hpe.com
+      - gavin.whelan@hpe.com
+      - surendran.gopinathan@hpe.com
+      - tanmoy.roy@hpe.com
+  - name: 'notifications-service'
+    product-name: 'notifications-service'
+    product-version: '1.0.0'
+    mgr-list:
+      - prasad.g-v-n@hpe.com
+      - sanju@hpe.com
+      - nitin.duggal@hpe.com
+    nonmgr-list:
+      - jogiparthi.sreekar@hpe.com
+      - mohan-m-s@hpe.com
+      - swapnil-sahu@hpe.com
+      - pushkal.goyal@hpe.com
+      - vikas.d-m@hpe.com
+      - preeti.sha.mirji@hpe.com
+      - srujini2@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+  - name: 'notifications-service'
+    product-name: 'notifications-service-fips'
+    product-version: '1.0.0'
+    mgr-list:
+      - prasad.g-v-n@hpe.com
+      - sanju@hpe.com
+      - nitin.duggal@hpe.com
+    nonmgr-list:
+      - jogiparthi.sreekar@hpe.com
+      - mohan-m-s@hpe.com
+      - swapnil-sahu@hpe.com
+      - pushkal.goyal@hpe.com
+      - vikas.d-m@hpe.com
+      - preeti.sha.mirji@hpe.com
+      - srujini2@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+  - name: 'notifications-service'
+    product-name: 'notifications-service-automation'
+    product-version: '1.0.0'
+    mgr-list:
+      - prasad.g-v-n@hpe.com
+      - sanju@hpe.com
+      - nitin.duggal@hpe.com
+    nonmgr-list:
+      - jogiparthi.sreekar@hpe.com
+      - mohan-m-s@hpe.com
+      - swapnil-sahu@hpe.com
+      - pushkal.goyal@hpe.com
+      - vikas.d-m@hpe.com
+      - preeti.sha.mirji@hpe.com
+      - srujini2@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+  - name: 'audit-trail'
+    product-name: 'audit-trail'
+    product-version: '1.0.0'
+    mgr-list:
+      - sanju@hpe.com
+      - prasad.g-v-n@hpe.com
+      - nitin.duggal@hpe.com
+    nonmgr-list:
+      - sagar.trimukhe@hpe.com
+      - sushil.kumar@hpe.com
+      - himani-shaik2@hpe.com
+      - vaishnavi.rajendran@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+      - karthiga.mani@hpe.com
+      - sandeep-kumar-katheriya@hpe.com
+  - name: 'audit-trail'
+    product-name: 'audit-trail-fips'
+    product-version: '1.0.0'
+    mgr-list:
+      - sanju@hpe.com
+      - prasad.g-v-n@hpe.com
+      - nitin.duggal@hpe.com
+    nonmgr-list:
+      - sagar.trimukhe@hpe.com
+      - sushil.kumar@hpe.com
+      - himani-shaik2@hpe.com
+      - vaishnavi.rajendran@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+      - karthiga.mani@hpe.com
+      - sandeep-kumar-katheriya@hpe.com
+  - name: 'audit-trail'
+    product-name: 'audit-trail-automation'
+    product-version: '1.0.0'
+    mgr-list:
+      - sanju@hpe.com
+      - prasad.g-v-n@hpe.com
+      - nitin.duggal@hpe.com
+    nonmgr-list:
+      - sagar.trimukhe@hpe.com
+      - sushil.kumar@hpe.com
+      - himani-shaik2@hpe.com
+      - vaishnavi.rajendran@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+      - karthiga.mani@hpe.com
+      - sandeep-kumar-katheriya@hpe.com
+  - name: 'invoicing-api'
+    product-name: 'invoicing-api'
+    product-version: '1.0.0'
+    mgr-list:
+      - sanju@hpe.com
+    nonmgr-list:
+      - wriddhirup.dutta@hpe.com
+      - kiran-kumar.vaddi@hpe.com
+      - rakesh.r@hpe.com
+      - aryaman.dubey@hpe.com
+  - name: 'invoicing-api'
+    product-name: 'invoicing-api-automation'
+    product-version: '1.0.0'
+    mgr-list:
+      - sanju@hpe.com
+    nonmgr-list:
+      - wriddhirup.dutta@hpe.com
+      - kiran-kumar.vaddi@hpe.com
+      - rakesh.r@hpe.com
+      - aryaman.dubey@hpe.com
+  - name: 'whats-new'
+    product-name: 'whats-new'
+    product-version: '1.0.0'
+    mgr-list:
+      - sanju@hpe.com
+    nonmgr-list:
+      - wriddhirup.dutta@hpe.com
+      - lokesh.s@hpe.com
+      - varshini-s@hpe.com
+      - rishwana-roshan.k@hpe.com
+      - vidhya.sadasivam@hpe.com
+      - aryaman.dubey@hpe.com
+  - name: 'whats-new'
+    product-name: 'whats-new-automation'
+    product-version: '1.0.0'
+    mgr-list:
+      - sanju@hpe.com
+    nonmgr-list:
+      - wriddhirup.dutta@hpe.com
+      - lokesh.s@hpe.com
+      - varshini-s@hpe.com
+      - rishwana-roshan.k@hpe.com
+      - vidhya.sadasivam@hpe.com
+      - aryaman.dubey@hpe.com
+  - name: 'account-management'
+    product-name: 'account-management'
+    product-version: '1.0.0'
+    mgr-list:
+      - bino.polackal@hpe.com
+      - gisani.sackser@hpe.com
+      - rory.moynihan@hpe.com
+    nonmgr-list:
+      - carlos.edu.reif@hpe.com
+      - gulati@hpe.com
+      - lrodrigues@hpe.com
+      - pedro.silva@hpe.com
+      - william.dur.sandanaraj@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+      - julian.romera@hpe.com
+      - michael.atuboyedia@hpe.com
+      - eoghan.shields@hpe.com
+  - name: 'account-management'
+    product-name: 'account-management-fips'
+    product-version: '1.0.0'
+    mgr-list:
+      - bino.polackal@hpe.com
+      - gisani.sackser@hpe.com
+      - rory.moynihan@hpe.com
+    nonmgr-list:
+      - carlos.edu.reif@hpe.com
+      - gulati@hpe.com
+      - lrodrigues@hpe.com
+      - pedro.silva@hpe.com
+      - william.dur.sandanaraj@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+      - julian.romera@hpe.com
+      - michael.atuboyedia@hpe.com
+      - eoghan.shields@hpe.com
+  - name: 'account-management'
+    product-name: 'account-management-fips-sc'
+    product-version: '1.0.0'
+    mgr-list:
+      - bino.polackal@hpe.com
+      - gisani.sackser@hpe.com
+      - rory.moynihan@hpe.com
+    nonmgr-list:
+      - carlos.edu.reif@hpe.com
+      - gulati@hpe.com
+      - lrodrigues@hpe.com
+      - pedro.silva@hpe.com
+      - william.dur.sandanaraj@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+      - julian.romera@hpe.com
+      - michael.atuboyedia@hpe.com
+      - eoghan.shields@hpe.com
+  - name: 'account-management'
+    product-name: 'account-management-automation'
+    product-version: '1.0.0'
+    mgr-list:
+      - bino.polackal@hpe.com
+      - gisani.sackser@hpe.com
+      - rory.moynihan@hpe.com
+    nonmgr-list:
+      - carlos.edu.reif@hpe.com
+      - gulati@hpe.com
+      - lrodrigues@hpe.com
+      - pedro.silva@hpe.com
+      - william.dur.sandanaraj@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+      - julian.romera@hpe.com
+      - michael.atuboyedia@hpe.com
+      - eoghan.shields@hpe.com
+  - name: 'authn'
+    product-name: 'authn'
+    product-version: '1.0.0'
+    mgr-list:
+      - bino.polackal@hpe.com
+      - gisani.sackser@hpe.com
+      - rory.moynihan@hpe.com
+    nonmgr-list:
+      - carlos.edu.reif@hpe.com
+      - gulati@hpe.com
+      - lrodrigues@hpe.com
+      - pedro.silva@hpe.com
+      - william.dur.sandanaraj@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+      - julian.romera@hpe.com
+      - michael.atuboyedia@hpe.com
+      - eoghan.shields@hpe.com
+  - name: 'authn'
+    product-name: 'authn-fips'
+    product-version: '1.0.0'
+    mgr-list:
+      - bino.polackal@hpe.com
+      - gisani.sackser@hpe.com
+      - rory.moynihan@hpe.com
+    nonmgr-list:
+      - carlos.edu.reif@hpe.com
+      - gulati@hpe.com
+      - lrodrigues@hpe.com
+      - pedro.silva@hpe.com
+      - william.dur.sandanaraj@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+      - julian.romera@hpe.com
+      - michael.atuboyedia@hpe.com
+      - eoghan.shields@hpe.com
+  - name: 'authn'
+    product-name: 'authn-fips-sc'
+    product-version: '1.0.0'
+    mgr-list:
+      - bino.polackal@hpe.com
+      - gisani.sackser@hpe.com
+      - rory.moynihan@hpe.com
+    nonmgr-list:
+      - carlos.edu.reif@hpe.com
+      - gulati@hpe.com
+      - lrodrigues@hpe.com
+      - pedro.silva@hpe.com
+      - william.dur.sandanaraj@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+      - julian.romera@hpe.com
+      - michael.atuboyedia@hpe.com
+      - eoghan.shields@hpe.com
+  - name: 'authn'
+    product-name: 'authn-automation'
+    product-version: '1.0.0'
+    mgr-list:
+      - bino.polackal@hpe.com
+      - gisani.sackser@hpe.com
+      - rory.moynihan@hpe.com
+    nonmgr-list:
+      - carlos.edu.reif@hpe.com
+      - gulati@hpe.com
+      - lrodrigues@hpe.com
+      - pedro.silva@hpe.com
+      - william.dur.sandanaraj@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+      - julian.romera@hpe.com
+      - michael.atuboyedia@hpe.com
+      - eoghan.shields@hpe.com
+  - name: 'pingfederate'
+    product-name: 'pingfederate-cloud-admin'
+    product-version: '1.0.0'
+    mgr-list:
+      - bino.polackal@hpe.com
+      - gisani.sackser@hpe.com
+      - rory.moynihan@hpe.com
+    nonmgr-list:
+      - carlos.edu.reif@hpe.com
+      - gulati@hpe.com
+      - lrodrigues@hpe.com
+      - lucas.cavalcante@hpe.com
+      - pedro.silva@hpe.com
+      - william.dur.sandanaraj@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+      - michael.atuboyedia@hpe.com
+      - julian.romera@hpe.com
+      - eoghan.shields@hpe.com
+  - name: 'pingfederate'
+    product-name: 'pingfederate-cloud-engine'
+    product-version: '1.0.0'
+    mgr-list:
+      - bino.polackal@hpe.com
+      - gisani.sackser@hpe.com
+      - rory.moynihan@hpe.com
+    nonmgr-list:
+      - carlos.edu.reif@hpe.com
+      - gulati@hpe.com
+      - lrodrigues@hpe.com
+      - lucas.cavalcante@hpe.com
+      - pedro.silva@hpe.com
+      - william.dur.sandanaraj@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+      - michael.atuboyedia@hpe.com
+      - julian.romera@hpe.com
+      - eoghan.shields@hpe.com
+  - name: 'pingfederate'
+    product-name: 'pingfederate-cop'
+    product-version: '1.0.0'
+    mgr-list:
+      - bino.polackal@hpe.com
+      - gisani.sackser@hpe.com
+      - rory.moynihan@hpe.com
+    nonmgr-list:
+      - carlos.edu.reif@hpe.com
+      - gulati@hpe.com
+      - lrodrigues@hpe.com
+      - lucas.cavalcante@hpe.com
+      - pedro.silva@hpe.com
+      - william.dur.sandanaraj@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+      - michael.atuboyedia@hpe.com
+      - julian.romera@hpe.com
+      - eoghan.shields@hpe.com
+  - name: 'pingfederate'
+    product-name: 'pingfederate-pingfederate-job'
+    product-version: '1.0.0'
+    mgr-list:
+      - bino.polackal@hpe.com
+      - gisani.sackser@hpe.com
+      - rory.moynihan@hpe.com
+    nonmgr-list:
+      - carlos.edu.reif@hpe.com
+      - gulati@hpe.com
+      - lrodrigues@hpe.com
+      - lucas.cavalcante@hpe.com
+      - pedro.silva@hpe.com
+      - william.dur.sandanaraj@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+      - michael.atuboyedia@hpe.com
+      - julian.romera@hpe.com
+      - eoghan.shields@hpe.com
+  - name: 'pingfederate'
+    product-name: 'pingfederate-upgrade-job'
+    product-version: '1.0.0'
+    mgr-list:
+      - bino.polackal@hpe.com
+      - gisani.sackser@hpe.com
+      - rory.moynihan@hpe.com
+    nonmgr-list:
+      - carlos.edu.reif@hpe.com
+      - gulati@hpe.com
+      - lrodrigues@hpe.com
+      - lucas.cavalcante@hpe.com
+      - pedro.silva@hpe.com
+      - william.dur.sandanaraj@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+      - michael.atuboyedia@hpe.com
+      - julian.romera@hpe.com
+      - eoghan.shields@hpe.com
+  - name: 'pingfederate'
+    product-name: 'pingfederate-downgrade-tool'
+    product-version: '1.0.0'
+    mgr-list:
+      - bino.polackal@hpe.com
+      - gisani.sackser@hpe.com
+      - rory.moynihan@hpe.com
+    nonmgr-list:
+      - carlos.edu.reif@hpe.com
+      - gulati@hpe.com
+      - lrodrigues@hpe.com
+      - lucas.cavalcante@hpe.com
+      - pedro.silva@hpe.com
+      - william.dur.sandanaraj@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+      - michael.atuboyedia@hpe.com
+      - julian.romera@hpe.com
+      - eoghan.shields@hpe.com
+  - name: 'pingfederate'
+    product-name: 'pingfederate-multiregion-manager'
+    product-version: '1.0.0'
+    mgr-list:
+      - bino.polackal@hpe.com
+      - gisani.sackser@hpe.com
+      - rory.moynihan@hpe.com
+    nonmgr-list:
+      - carlos.edu.reif@hpe.com
+      - gulati@hpe.com
+      - lrodrigues@hpe.com
+      - lucas.cavalcante@hpe.com
+      - pedro.silva@hpe.com
+      - william.dur.sandanaraj@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+      - michael.atuboyedia@hpe.com
+      - julian.romera@hpe.com
+      - eoghan.shields@hpe.com
+  - name: 'pingfederate'
+    product-name: 'pingfederate-sidecar'
+    product-version: '1.0.0'
+    mgr-list:
+      - bino.polackal@hpe.com
+      - gisani.sackser@hpe.com
+      - rory.moynihan@hpe.com
+    nonmgr-list:
+      - carlos.edu.reif@hpe.com
+      - gulati@hpe.com
+      - lrodrigues@hpe.com
+      - lucas.cavalcante@hpe.com
+      - pedro.silva@hpe.com
+      - william.dur.sandanaraj@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+      - michael.atuboyedia@hpe.com
+      - julian.romera@hpe.com
+      - eoghan.shields@hpe.com
+  - name: 'ui-doorway'
+    product-name: 'ui-doorway'
+    product-version: '1.0.0'
+    mgr-list:
+      - sailaja.brahmandam@hpe.com
+    nonmgr-list:
+      - rajveer.beerda@hpe.com
+      - anish-kumar.pathak@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+  - name: 'ui-doorway'
+    product-name: 'ui-doorway-fips'
+    product-version: '1.0.0'
+    mgr-list:
+      - sailaja.brahmandam@hpe.com
+    nonmgr-list:
+      - rajveer.beerda@hpe.com
+      - anish-kumar.pathak@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+  - name: 'ui-doorway'
+    product-name: 'ui-doorway-automation'
+    product-version: '1.0.0'
+    mgr-list:
+      - sailaja.brahmandam@hpe.com
+    nonmgr-list:
+      - rajveer.beerda@hpe.com
+      - anish-kumar.pathak@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+  - name: 'activate-inventory'
+    product-name: 'activate-inventory'
+    product-version: '1.0.0'
+    mgr-list:
+      - bhaskar.bhattacharjee@hpe.com
+      - avyas@hpe.com
+      - savitha.amarnath@hpe.com
+      - yinchao.guo@hpe.com
+    nonmgr-list:
+      - firdousi.farozan@hpe.com
+      - hemant.kumar8@hpe.com
+      - anirudha.shinde@hpe.com
+      - mohan-reddy.maligi-reddy@hpe.com
+      - veena.y.dong@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+  - name: 'activate-inventory'
+    product-name: 'activate-inventory-automation'
+    product-version: '1.0.0'
+    mgr-list:
+      - bhaskar.bhattacharjee@hpe.com
+      - avyas@hpe.com
+      - savitha.amarnath@hpe.com
+      - yinchao.guo@hpe.com
+    nonmgr-list:
+      - firdousi.farozan@hpe.com
+      - hemant.kumar8@hpe.com
+      - anirudha.shinde@hpe.com
+      - mohan-reddy.maligi-reddy@hpe.com
+      - veena.y.dong@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+  - name: 'activate-order-processor'
+    product-name: 'activate-order-processor'
+    product-version: '1.0.0'
+    mgr-list:
+      - bhaskar.bhattacharjee@hpe.com
+      - avyas@hpe.com
+      - savitha.amarnath@hpe.com
+      - yinchao.guo@hpe.com
+    nonmgr-list:
+      - firdousi.farozan@hpe.com
+      - hemant.kumar8@hpe.com
+      - anirudha.shinde@hpe.com
+      - mohan-reddy.maligi-reddy@hpe.com
+      - veena.y.dong@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+  - name: 'activate-order-processor'
+    product-name: 'activate-order-processor-automation'
+    product-version: '1.0.0'
+    mgr-list:
+      - bhaskar.bhattacharjee@hpe.com
+      - avyas@hpe.com
+      - savitha.amarnath@hpe.com
+      - yinchao.guo@hpe.com
+    nonmgr-list:
+      - firdousi.farozan@hpe.com
+      - hemant.kumar8@hpe.com
+      - anirudha.shinde@hpe.com
+      - mohan-reddy.maligi-reddy@hpe.com
+      - veena.y.dong@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+  - name: 'activate-device-direct'
+    product-name: 'activate-device-direct'
+    product-version: '1.0.0'
+    mgr-list:
+      - bhaskar.bhattacharjee@hpe.com
+      - avyas@hpe.com
+      - savitha.amarnath@hpe.com
+      - yinchao.guo@hpe.com
+    nonmgr-list:
+      - firdousi.farozan@hpe.com
+      - hemant.kumar8@hpe.com
+      - anirudha.shinde@hpe.com
+      - mohan-reddy.maligi-reddy@hpe.com
+      - veena.y.dong@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+  - name: 'activate-device-direct'
+    product-name: 'activate-device-direct-automation'
+    product-version: '1.0.0'
+    mgr-list:
+      - bhaskar.bhattacharjee@hpe.com
+      - avyas@hpe.com
+      - savitha.amarnath@hpe.com
+      - yinchao.guo@hpe.com
+    nonmgr-list:
+      - firdousi.farozan@hpe.com
+      - hemant.kumar8@hpe.com
+      - anirudha.shinde@hpe.com
+      - mohan-reddy.maligi-reddy@hpe.com
+      - veena.y.dong@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+  - name: 'activate-bridge'
+    product-name: 'activate-bridge'
+    product-version: '1.0.0'
+    mgr-list:
+      - bhaskar.bhattacharjee@hpe.com
+      - avyas@hpe.com
+      - savitha.amarnath@hpe.com
+      - yinchao.guo@hpe.com
+    nonmgr-list:
+      - firdousi.farozan@hpe.com
+      - hemant.kumar8@hpe.com
+      - anirudha.shinde@hpe.com
+      - mohan-reddy.maligi-reddy@hpe.com
+      - veena.y.dong@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+  - name: 'activate-bridge'
+    product-name: 'activate-bridge-automation'
+    product-version: '1.0.0'
+    mgr-list:
+      - bhaskar.bhattacharjee@hpe.com
+      - avyas@hpe.com
+      - savitha.amarnath@hpe.com
+      - yinchao.guo@hpe.com
+    nonmgr-list:
+      - firdousi.farozan@hpe.com
+      - hemant.kumar8@hpe.com
+      - anirudha.shinde@hpe.com
+      - mohan-reddy.maligi-reddy@hpe.com
+      - veena.y.dong@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+  - name: 'device-profile-management'
+    product-name: 'device-profile-management'
+    product-version: '1.0.0'
+    mgr-list:
+      - bhaskar.bhattacharjee@hpe.com
+      - avyas@hpe.com
+      - savitha.amarnath@hpe.com
+      - yinchao.guo@hpe.com
+    nonmgr-list:
+      - firdousi.farozan@hpe.com
+      - hemant.kumar8@hpe.com
+      - anirudha.shinde@hpe.com
+      - mohan-reddy.maligi-reddy@hpe.com
+      - veena.y.dong@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+  - name: 'inventory-nbapi'
+    product-name: 'inventory-nbapi'
+    product-version: '1.0.0'
+    mgr-list:
+      - bhaskar.bhattacharjee@hpe.com
+      - avyas@hpe.com
+      - savitha.amarnath@hpe.com
+      - yinchao.guo@hpe.com
+    nonmgr-list:
+      - firdousi.farozan@hpe.com
+      - hemant.kumar8@hpe.com
+      - anirudha.shinde@hpe.com
+      - mohan-reddy.maligi-reddy@hpe.com
+      - veena.y.dong@hpe.com
+  - name: 'inventory-nbapi'
+    product-name: 'inventory-nbapi-automation'
+    product-version: '1.0.0'
+    mgr-list:
+      - bhaskar.bhattacharjee@hpe.com
+      - avyas@hpe.com
+      - savitha.amarnath@hpe.com
+      - yinchao.guo@hpe.com
+    nonmgr-list:
+      - firdousi.farozan@hpe.com
+      - hemant.kumar8@hpe.com
+      - anirudha.shinde@hpe.com
+      - mohan-reddy.maligi-reddy@hpe.com
+      - veena.y.dong@hpe.com
+  - name: 'async-handler-service'
+    product-name: 'async-handler-service'
+    product-version: '1.0.0'
+    mgr-list:
+      - bhaskar.bhattacharjee@hpe.com
+      - avyas@hpe.com
+      - savitha.amarnath@hpe.com
+      - yinchao.guo@hpe.com
+    nonmgr-list:
+      - firdousi.farozan@hpe.com
+      - hemant.kumar8@hpe.com
+      - anirudha.shinde@hpe.com
+      - mohan-reddy.maligi-reddy@hpe.com
+      - veena.y.dong@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+  - name: 'async-handler-service'
+    product-name: 'async-handler-service-automation'
+    product-version: '1.0.0'
+    mgr-list:
+      - bhaskar.bhattacharjee@hpe.com
+      - avyas@hpe.com
+      - savitha.amarnath@hpe.com
+      - yinchao.guo@hpe.com
+    nonmgr-list:
+      - firdousi.farozan@hpe.com
+      - hemant.kumar8@hpe.com
+      - anirudha.shinde@hpe.com
+      - mohan-reddy.maligi-reddy@hpe.com
+      - veena.y.dong@hpe.com
+      - david.wang3@hpe.com
+      - anitha.kamasetty@hpe.com
+  - name: 'unified-events-registration-service'
+    product-name: 'unified-events-registration-service'
+    product-version: '1.0.0'
+    mgr-list:
+      - kamaljeet-singh.madan@hpe.com
+      - nuwas.ponnambathayil@hpe.com
+      - santhoshs@hpe.com
+      - chandan.hemraj@hpe.com
+      - r-nishanth-sai@hpe.com
+    nonmgr-list:
+      - vandewilly.oliveira-da.silva@hpe.com
+      - parags@hpe.com
+  - name: 'unified-events-registration-service'
+    product-name: 'unified-events-registration-service-automation'
+    product-version: '1.0.0'
+    mgr-list:
+      - kamaljeet-singh.madan@hpe.com
+      - nuwas.ponnambathayil@hpe.com
+      - santhoshs@hpe.com
+      - chandan.hemraj@hpe.com
+      - r-nishanth-sai@hpe.com
+    nonmgr-list:
+      - vandewilly.oliveira-da.silva@hpe.com
+      - parags@hpe.com
+  - name: 'support-assistant'
+    product-name: 'support-assistant'
+    product-version: '1.0.0'
+    mgr-list:
+      - parinitha@hpe.com
+    nonmgr-list:
+      - nayana.ramesh@hpe.com
+      - baulin-priyanka.maharajan@hpe.com
+      - akshay.kumar4@hpe.com
+      - aayush-bhatt@hpe.com
+      - kushal.jamadagni@hpe.com
+  - name: 'support-assistant'
+    product-name: 'support-assistant-fips'
+    product-version: '1.0.0'
+    mgr-list:
+      - parinitha@hpe.com
+    nonmgr-list:
+      - nayana.ramesh@hpe.com
+      - baulin-priyanka.maharajan@hpe.com
+      - akshay.kumar4@hpe.com
+      - aayush-bhatt@hpe.com
+      - kushal.jamadagni@hpe.com
+  - name: 'support-assistant'
+    product-name: 'support-assistant-automation'
+    product-version: '1.0.0'
+    mgr-list:
+      - parinitha@hpe.com
+    nonmgr-list:
+      - nayana.ramesh@hpe.com
+      - baulin-priyanka.maharajan@hpe.com
+      - akshay.kumar4@hpe.com
+      - aayush-bhatt@hpe.com
+      - kushal.jamadagni@hpe.com
+  - name: 'sample-publisher'
+    product-name: 'sample-publisher'
+    product-version: '1.0.0'
+    mgr-list:
+      - kamaljeet-singh.madan@hpe.com
+      - nuwas.ponnambathayil@hpe.com
+      - santhoshs@hpe.com
+      - chandan.hemraj@hpe.com
+      - r-nishanth-sai@hpe.com
+    nonmgr-list:
+      - vandewilly.oliveira-da.silva@hpe.com
+      - parags@hpe.com
+  - name: 'sample-publisher'
+    product-name: 'sample-publisher-automation'
+    product-version: '1.0.0'
+    mgr-list:
+      - kamaljeet-singh.madan@hpe.com
+      - nuwas.ponnambathayil@hpe.com
+      - santhoshs@hpe.com
+      - chandan.hemraj@hpe.com
+      - r-nishanth-sai@hpe.com
+    nonmgr-list:
+      - vandewilly.oliveira-da.silva@hpe.com
+      - parags@hpe.com
+  - name: 'unified-events-ingestion-service'
+    product-name: 'unified-events-ingestion-service'
+    product-version: '1.0.0'
+    mgr-list:
+      - kamaljeet-singh.madan@hpe.com
+    nonmgr-list:
+      - vandewilly.oliveira-da.silva@hpe.com
+      - nuwas.ponnambathayil@hpe.com
+      - parags@hpe.com
+  - name: 'unified-events-ingestion-service'
+    product-name: 'unified-events-ingestion-service-automation'
+    product-version: '1.0.0'
+    mgr-list:
+      - kamaljeet-singh.madan@hpe.com
+    nonmgr-list:
+      - vandewilly.oliveira-da.silva@hpe.com
+      - nuwas.ponnambathayil@hpe.com
+      - parags@hpe.com
+  - name: 'unified-events-delivery-service'
+    product-name: 'unified-events-delivery-service'
+    product-version: '1.0.0'
+    mgr-list:
+      - kamaljeet-singh.madan@hpe.com
+    nonmgr-list:
+      - vandewilly.oliveira-da.silva@hpe.com
+      - nuwas.ponnambathayil@hpe.com
+      - parags@hpe.com
+  - name: 'unified-events-delivery-service'
+    product-name: 'unified-events-delivery-service-automation'
+    product-version: '1.0.0'
+    mgr-list:
+      - kamaljeet-singh.madan@hpe.com
+    nonmgr-list:
+      - vandewilly.oliveira-da.silva@hpe.com
+      - nuwas.ponnambathayil@hpe.com
+      - parags@hpe.com
+  - name: 'unified-events-nats-infra'
+    product-name: 'unified-events-nats-infra'
+    product-version: '1.0.0'
+    mgr-list:
+      - kamaljeet-singh.madan@hpe.com
+    nonmgr-list:
+      - vandewilly.oliveira-da.silva@hpe.com
+      - nuwas.ponnambathayil@hpe.com
+      - parags@hpe.com
+  - name: 'unified-events-nats-infra'
+    product-name: 'unified-events-nats-infra-automation'
+    product-version: '1.0.0'
+    mgr-list:
+      - kamaljeet-singh.madan@hpe.com
+    nonmgr-list:
+      - vandewilly.oliveira-da.silva@hpe.com
+      - nuwas.ponnambathayil@hpe.com
+      - parags@hpe.com
+  - name: 'python-sample-app'
+    product-name: 'python-sample-app'
+    product-version: '1.0.0'
+    mgr-list:
+      - paolo.dellarocca@hpe.com
+    nonmgr-list:
+      - loganathan.m@hpe.com
+  - name: 'unified-api'
+    product-name: 'unified-api'
+    product-version: '1.0.0'
+    mgr-list:
+      - kamaljeet-singh.madan@hpe.com
+    nonmgr-list:
+      - chinglenkhomba.lamabam@hpe.com
+      - dipin.vasu@hpe.com
+      - agbar.shaik@hpe.com
+      - arshdeep.singh@hpe.com
+  - name: 'auto-unified-api'
+    product-name: 'auto-unified-api'
+    product-version: '1.0.0'
+    mgr-list:
+      - kamaljeet-singh.madan@hpe.com
+    nonmgr-list:
+      - chinglenkhomba.lamabam@hpe.com
+      - dipin.vasu@hpe.com
+      - agbar.shaik@hpe.com
+      - arshdeep.singh@hpe.com
+  - name: 'unified-session-management'
+    product-name: 'session-manager'
+    product-version: '1.0.0'
+    mgr-list:
+      - julia.kohav@hpe.com
+      - rodolfo.pirotti@hpe.com
+    nonmgr-list:
+      - miqueas.dos-santos@hpe.com
+  - name: 'unified-session-management'
+    product-name: 'cookie-exchange'
+    product-version: '1.0.0'
+    mgr-list:
+      - julia.kohav@hpe.com
+      - rodolfo.pirotti@hpe.com
+    nonmgr-list:
+      - miqueas.dos-santos@hpe.com
+  - name: 'user-personalisation'
+    product-name: 'user-personalisation'
+    product-version: '1.0.0'
+    mgr-list:
+      - parinitha@hpe.com
+    nonmgr-list:
+      - tulasi-prasad-gupta.cheedella@hpe.com
+      - shiva-shashank.dhavala@hpe.com
+      - anurag.hathimare@hpe.com
+  - name: 'sso-management'
+    product-name: 'sso-manager'
+    product-version: '1.0.0'
+    mgr-list:
+      - julia.kohav@hpe.com
+      - rodolfo.pirotti@hpe.com
+    nonmgr-list:
+      - miqueas.dos-santos@hpe.com
+  - name: 'sso-management'
+    product-name: 'domains'
+    product-version: '1.0.0'
+    mgr-list:
+      - julia.kohav@hpe.com
+      - rodolfo.pirotti@hpe.com
+    nonmgr-list:
+      - miqueas.dos-santos@hpe.com
+  - name: 'sso-management'
+    product-name: 'domains-db-migration'
+    product-version: '1.0.0'
+    mgr-list:
+      - julia.kohav@hpe.com
+      - rodolfo.pirotti@hpe.com
+    nonmgr-list:
+      - miqueas.dos-santos@hpe.com
+  - name: 'ccs-tools'
+    product-name: 'ccs-tools'
+    product-version: '1.0.0'
+    mgr-list:
+      - bhaskar.bhattacharjee@hpe.com
+      - nitin.mathur@hpe.com
+    nonmgr-list:
+      - mayank.agrawal@hpe.com
+  - name: 'spire-fetch-monitor'
+    product-name: 'spire-fetch-monitor'
+    product-version: '1.0.0'
+    mgr-list:
+      - william.barrera-fuentes@hpe.com
+    nonmgr-list:
+      - max-martin.lambrecht@hpe.com
+      - agustin.fayo@hpe.com
+      - federico.quijada@hpe.com
+  - name: 'spire-fetch-monitor'
+    product-name: 'spire-fetch-monitor-fips'
+    product-version: '1.0.0'
+    mgr-list:
+      - william.barrera-fuentes@hpe.com
+    nonmgr-list:
+      - max-martin.lambrecht@hpe.com
+      - agustin.fayo@hpe.com
+      - federico.quijada@hpe.com
+  - name: 'device-identity-service'
+    product-name: 'device-identity-service'
+    product-version: '1.0.0'
+    mgr-list:
+      - william.barrera-fuentes@hpe.com
+    nonmgr-list:
+      - gabriel.forestieri@hpe.com
+      - maximiliano-gabriel.churichi@hpe.com
+      - marcos.yacob@hpe.com
