@@ -22,6 +22,7 @@ jobs:
         with:
           repository: Omkarprakashchavan/tarun-repo-1
           path: tarun-repo-1
+          fetch-depth: 0
       - name: Set Job event name as environment variable
         run: export RUN_EVENT=${{ github.event_name }}
       - name: Install Python modules
