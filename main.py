@@ -44,6 +44,7 @@ def get_second_top_commit(repo_path):
         raise ValueError("The repository does not have a branch named 'main'.")
     # Get the list of commits in the branch
     commits = list(repo.iter_commits(branch.name, max_count=2))
+    print(commits)
     if len(commits) < 2:
         raise ValueError("There are less than two commits in the 'main' branch.")
     # The second most recent commit will be the second item in the list
