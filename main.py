@@ -24,10 +24,10 @@ api_url = 'https://api.github.com/graphql'
 # github_token = os.environ['GITHUB_APP_TOKEN']
 organisation = 'Omkarprakashchavan'
 repositories = []
-headers = {
-    'Authorization': f'Bearer {github_token}',
-    'Content-Type': 'application/json'
-}
+# headers = {
+#     'Authorization': f'Bearer {github_token}',
+#     'Content-Type': 'application/json'
+# }
 
 logger: Union[logging.Logger, None] = None
 gh_obj = None
