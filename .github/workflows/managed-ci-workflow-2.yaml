@@ -106,6 +106,7 @@ jobs:
           print(main_branch)
           latest_commit_sha = main_branch.commit.hexsha
           second_top_commit = get_second_top_commit(repo_path)
+          print(repo_path, latest_commit_sha, second_top_commit)
           # print(f"Latest commit SHA of 'main': {latest_commit_sha} {second_top_commit}")
           print(f' Printing commit details: {latest_commit_sha}, {second_top_commit}')
           try:
