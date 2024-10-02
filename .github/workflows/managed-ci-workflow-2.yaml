@@ -53,10 +53,8 @@ jobs:
           repo_path = versioned_ci_repo
           repo = git.Repo(repo_path)
           main_branch = repo.heads.main
-          
           def load_yaml(file_content):
               return yaml.safe_load(file_content)
-          
           def get_file_content_from_commit(repo, commit_sha, file_path):
               commit = repo.commit(commit_sha)
               try:
@@ -66,7 +64,6 @@ jobs:
               except KeyError:
                   print("ValueError")
                   # raise ValueError(f"File '{file_path}' does not exist in commit {commit_sha}")
-          
           def get_second_top_commit(repo_path):
               repo = git.Repo(repo_path)
               try:
@@ -82,7 +79,6 @@ jobs:
               # The second most recent commit will be the second item in the list
               second_top_commit = commits[1]
               return second_top_commit
-          
           def compare_repositories(repo_list1, repo_list2):
               changes = {'repositories': []}
               # Convert list of dictionaries to a list of unique identifiers (name and refspec)
@@ -103,7 +99,6 @@ jobs:
               if not changes['repositories']:
                   return {}
               return changes
-              
           print(main_branch)
           latest_commit_sha = main_branch.commit.hexsha
           second_top_commit = get_second_top_commit(repo_path)
