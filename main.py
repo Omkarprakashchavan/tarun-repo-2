@@ -9,10 +9,6 @@ import git
 import yaml
 from ruamel.yaml import YAML
 from pathlib import Path
-mod_path = Path(__file__).parent
-relative_path_1 = '../../../'
-src_path_1 = (mod_path / relative_path_1).resolve()
-print(mod_path, src_path_1)
 
 sys.path.append(f'{os.path.dirname(__file__)}/..')
 import subprocess
@@ -96,6 +92,10 @@ file_name_pattern='managed-ci'
 versioned_ci_repo = f'{os.path.dirname(__file__)}/../tarun-repo-1'
 repo_path = versioned_ci_repo
 file_path = 'workflow-deployment.yaml'
+mod_path = Path(__file__).parent
+relative_path_1 = '../../../'
+src_path_1 = (mod_path / relative_path_1).resolve()
+print(mod_path, src_path_1)
 print(f'printing version ci repo name {versioned_ci_repo} {repo_path}')
 repo = git.Repo(repo_path)
 try:
