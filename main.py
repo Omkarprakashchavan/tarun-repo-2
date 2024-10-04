@@ -95,7 +95,7 @@ file_path = 'workflow-deployment.yaml'
 mod_path = Path(__file__).parent
 relative_path_1 = '../../../'
 src_path_1 = (mod_path / relative_path_1).resolve()
-print(mod_path, src_path_1)
+print(f'{mod_path},-------------------- {src_path_1}')
 print(f'printing version ci repo name {versioned_ci_repo} {repo_path}')
 repo = git.Repo(repo_path)
 try:
@@ -109,7 +109,7 @@ second_top_commit = get_second_top_commit(repo_path)
 print(f"Latest commit SHA of 'main': {latest_commit_sha}")
 try:
   file_commit_sha = get_file_content_from_commit(repo, latest_commit_sha, file_path)
-  print(f"Commit SHA of '{file_path}' in the latest commit: {file_commit_sha}")
+  # print(f"Commit SHA of '{file_path}' in the latest commit: {file_commit_sha}")
 except ValueError:
   print(f"File '{file_path}' does not exist in the latest commit {latest_commit_sha}")
 
