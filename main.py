@@ -96,6 +96,7 @@ mod_path = Path(__file__).parent
 relative_path_1 = '../tarun-repo-1/'
 src_path_1 = (mod_path / relative_path_1).resolve()
 print(f'{mod_path},-------------------- {src_path_1}')
+repo_path = src_path_1
 print(f'printing version ci repo name {versioned_ci_repo} {repo_path}')
 repo = git.Repo(repo_path)
 try:
