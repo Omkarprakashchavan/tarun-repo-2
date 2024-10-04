@@ -127,4 +127,4 @@ jobs:
           # repositories2 = dict_new['modules'][0]['repositories']
           # changed_repositories = compare_repositories(repositories1, repositories2)
           # print(f'Changed repositories: {changed_repositories}')
-          """
+          # """
