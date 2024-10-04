@@ -8,6 +8,11 @@ from datetime import datetime
 import git
 import yaml
 from ruamel.yaml import YAML
+from pathlib import Path
+mod_path = Path(__file__).parent
+relative_path_1 = '../../../'
+src_path_1 = (mod_path / relative_path_1).resolve()
+print(mod_path, src_path_1)
 
 sys.path.append(f'{os.path.dirname(__file__)}/..')
 import subprocess
