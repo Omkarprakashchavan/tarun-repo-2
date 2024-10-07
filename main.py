@@ -94,10 +94,11 @@ print(arr)
 print(f'versioned CI Repo {versioned_ci_repo}')
 repo_path = versioned_ci_repo
 file_path = 'tarun-repo-config/configs/workflow-deployment.yaml'
-print(file_path)
+print(f' file path ------ {file_path}')
 mod_path = Path(__file__).parent
 relative_config_path = '../tarun-repo-config/'
 src_path_1 = (mod_path / relative_config_path).resolve()
+deployment_workflow_path = (mod_path / relative_config_path / configs / 'workflow-deployment.yaml').resolve()
 print(f'{mod_path},-------------------- {src_path_1}')
 repo_path = src_path_1
 print(f'printing version ci repo name {versioned_ci_repo} {repo_path}')
