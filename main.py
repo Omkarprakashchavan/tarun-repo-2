@@ -18,6 +18,8 @@ from os.path import isfile, join
 import requests
 import json
 
+print('HELLllllllllo')
+
 def load_yaml(file_content):
     """Read workflow-deployment.yaml content into a dictionary."""
     return yaml.safe_load(file_content)
