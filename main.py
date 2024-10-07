@@ -98,7 +98,7 @@ print(f' file path ------ {file_path}')
 mod_path = Path(__file__).parent
 relative_config_path = '../tarun-repo-config/'
 src_path_1 = (mod_path / relative_config_path).resolve()
-deployment_workflow_path = (mod_path / relative_config_path / 'configs' / 'workflow-deployment.yaml').resolve()
+deployment_workflow_path = str((mod_path / relative_config_path / 'configs' / 'workflow-deployment.yaml').resolve())
 print(f'deployment_workflow_path ============= {deployment_workflow_path}')
 print(f'{mod_path},-------------------- {src_path_1}')
 repo_path = src_path_1
