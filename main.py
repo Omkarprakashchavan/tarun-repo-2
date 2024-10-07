@@ -12,9 +12,6 @@ from pathlib import Path
 
 sys.path.append(f'{os.path.dirname(__file__)}/..')
 import subprocess
-import utils.myutils as mu
-from utils.myutils import file_exists, mkdir_p
-from utils.github_apis import GitHubAPIs
 from os import listdir
 from os.path import isfile, join
 
