@@ -91,7 +91,7 @@ file_name_pattern='managed-ci'
 
 versioned_ci_repo = f'{os.path.dirname(__file__)}/../tarun-repo-1'
 repo_path = versioned_ci_repo
-file_path = 'workflow-deployment.yaml'
+file_path = 'configs/workflow-deployment.yaml'
 mod_path = Path(__file__).parent
 relative_path_1 = '../tarun-repo-1/'
 src_path_1 = (mod_path / relative_path_1).resolve()
