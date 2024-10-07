@@ -88,15 +88,15 @@ topdir = os.path.dirname(os.path.abspath(sys.argv[0]))
 logdir = f'{topdir}/logdir'
 file_name_pattern='managed-ci'
 
-versioned_ci_repo = f'{os.path.dirname(__file__)}/../tarun-repo-1'
+versioned_ci_repo = f'{os.path.dirname(__file__)}/../tarun-repo-config'
 arr = os.listdir()
 print(arr)
 print(f'versioned CI Repo {versioned_ci_repo}')
 repo_path = versioned_ci_repo
-file_path = 'tarun-repo-1/configs/workflow-deployment.yaml'
+file_path = 'tarun-repo-config/configs/workflow-deployment.yaml'
 print(file_path)
 mod_path = Path(__file__).parent
-relative_path_1 = '../tarun-repo-1/'
+relative_path_1 = '../tarun-repo-config/'
 src_path_1 = (mod_path / relative_path_1).resolve()
 print(f'{mod_path},-------------------- {src_path_1}')
 repo_path = src_path_1
