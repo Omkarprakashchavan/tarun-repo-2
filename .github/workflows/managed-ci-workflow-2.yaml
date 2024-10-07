@@ -20,8 +20,8 @@ jobs:
       - name: Clone the MCI repository
         uses: actions/checkout@v3.3.0
         with:
-          repository: Omkarprakashchavan/tarun-repo-1
-          path: tarun-repo-1
+          repository: Omkarprakashchavan/tarun-repo-config
+          path: tarun-repo-config
           fetch-depth: 0
       - name: Set Job event name as environment variable
         run: export RUN_EVENT=${{ github.event_name }}
