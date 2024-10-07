@@ -94,7 +94,7 @@ arr = os.listdir()
 print(arr)
 print(f'versioned CI Repo {versioned_ci_repo}')
 repo_path = versioned_ci_repo
-file_path = '../configs/workflow-deployment.yaml'
+file_path = 'tarun-repo-1/configs/workflow-deployment.yaml'
 print(file_path)
 mod_path = Path(__file__).parent
 relative_path_1 = '../tarun-repo-1/'
