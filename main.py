@@ -49,6 +49,18 @@ def get_second_top_commit(repo_path):
         raise ValueError("There are less than two commits in the 'main' branch.")
     # The second most recent commit will be the second item in the list
     second_top_commit = commits[1]
+    commit = repo.commit(commits[0])
+    parent_commit = commit.parents[0] if commit.parents else None
+    if parent_commit:
+        diff = commit.diff(parent_commit)
+        changed_files = []
+        for change in diff:
+            file_info = {
+                'file': change.a_path,  # the file name
+                'change_type': change.change_type  # 'A', 'M', or 'D'
+            }
+            changed_files.append(file_info)
+        print(changed_files)
     return second_top_commit
 
 def compare_repositories(repo_list1, repo_list2):
