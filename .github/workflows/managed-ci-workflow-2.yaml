@@ -12,6 +12,7 @@ jobs:
       - name: Clone the MCI repository
         uses: actions/checkout@v3.3.0
         with:
+          repository: Omkarprakashchavan/tarun-repo-2
           path: tarun-repo-2
       - name: Clone the MCI repository
         uses: actions/checkout@v3.3.0
