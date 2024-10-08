@@ -36,10 +36,9 @@ jobs:
           ls -lart tarun-repo-config/
           echo "------------tarun-repo-2-------------------"
           ls -lart tarun-repo-2/
-          cd tarun-repo-2/
           ls -lrta
           tree -h .
-          python main.py
+          python tarun-repo-2/main.py
           # # Import hashlib library (md5 method is part of it)
           # python -c """
           # """
