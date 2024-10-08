@@ -31,7 +31,9 @@ jobs:
           pip3 install gitpython
           ls -lrt
           pwd
-          set -x
+          ls -lart tarun-repo-config
+          echo "-------------------------------"
+          ls -lart tarun-repo-2
           python tarun-repo-2/main.py
           # # Import hashlib library (md5 method is part of it)
           # python -c """
