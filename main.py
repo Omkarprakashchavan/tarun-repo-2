@@ -9,6 +9,10 @@ import git
 import yaml
 from ruamel.yaml import YAML
 from pathlib import Path
+import trace
+
+# Set up the tracer
+tracer = trace.Trace(count=False, trace=True)
 
 sys.path.append(f'{os.path.dirname(__file__)}/..')
 import subprocess
